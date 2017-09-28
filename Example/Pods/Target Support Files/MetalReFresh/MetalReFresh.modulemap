@@ -1,0 +1,6 @@
+framework module MetalReFresh {
+  umbrella header "MetalReFresh-umbrella.h"
+
+  export *
+  module * { export * }
+}
