@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MetalReFresh'
-  s.version          = '0.2.0'
-  s.summary          = 'A short description of MetalReFresh.'
+  s.version          = '0.2.1'
+  s.summary          = 'A new function was added.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,15 +21,15 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/daisuke nagata/MetalReFresh'
+  s.homepage         = 'https://github.com/daisukenagata/MetalReFresh'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'daisuke nagata' => 'dbank0208@gmail.com' }
-  s.source           = { :git => 'https://github.com/daisuke nagata/MetalReFresh.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/daisukenagata/MetalReFresh.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
-
+  s.platform     = :ios, '10.0'
   s.source_files = 'MetalReFresh/Classes/**/*'
   
   # s.resource_bundles = {
