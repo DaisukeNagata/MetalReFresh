@@ -10,13 +10,12 @@
 		2CB6D292F2FEA48C4078B999 /* Pods_MetalReFresh_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CCD7126493D77E34D0C1A2 /* Pods_MetalReFresh_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B84DD82E825467C3F41125F6 /* Pods_MetalReFresh_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D056723B5D1E0BE12287D7 /* Pods_MetalReFresh_Example.framework */; };
 		BBC90B4C1F7D85520051DF7E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B4B1F7D85520051DF7E /* TableViewController.swift */; };
 		BBC90B521F7D864B0051DF7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC90B511F7D864B0051DF7E /* Main.storyboard */; };
-		BBC90B571F7D87910051DF7E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B561F7D87910051DF7E /* Shaders.metal */; };
+		BBC90B6D1F7FAC300051DF7E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B6C1F7FAC300051DF7E /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +36,6 @@
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MetalReFresh_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalReFresh_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,7 +46,7 @@
 		B59A075E200BF7F92DD508B2 /* Pods-MetalReFresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalReFresh_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetalReFresh_Tests/Pods-MetalReFresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBC90B4B1F7D85520051DF7E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BBC90B511F7D864B0051DF7E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		BBC90B561F7D87910051DF7E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		BBC90B6C1F7FAC300051DF7E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		DD5E2C4086963897B2BFC715 /* Pods-MetalReFresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalReFresh_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetalReFresh_Example/Pods-MetalReFresh_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ECBD9FD4F3272A2107560052 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,9 +99,8 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				BBC90B4B1F7D85520051DF7E /* TableViewController.swift */,
 				BBC90B511F7D864B0051DF7E /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				BBC90B561F7D87910051DF7E /* Shaders.metal */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				BBC90B6C1F7FAC300051DF7E /* Shaders.metal */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for MetalReFresh";
@@ -258,7 +255,6 @@
 			files = (
 				BBC90B521F7D864B0051DF7E /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC90B571F7D87910051DF7E /* Shaders.metal in Sources */,
+				BBC90B6D1F7FAC300051DF7E /* Shaders.metal in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				BBC90B4C1F7D85520051DF7E /* TableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

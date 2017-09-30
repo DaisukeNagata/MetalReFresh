@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.refresh()
-        
+        swipeMethod()
     }
     
     func refresh()
@@ -29,7 +29,7 @@ class TableViewController: UITableViewController {
     
     @objc func refreshSet()
     {
-        if self.pull.imageCount == 5 {
+        if  ImageEntity.imageArray.count == 0 {
             
             self.pull.imageCount = 0
             
@@ -38,6 +38,28 @@ class TableViewController: UITableViewController {
         tableView.reloadData()
         self.pull.timerSet(view:self.tableView)
         tableView.isScrollEnabled = false
+        
+    }
+    
+    private func swipeMethod()
+    {
+        
+        let directions: [UISwipeGestureRecognizerDirection] = [.right]
+        for direction in directions {
+            let gesture = UISwipeGestureRecognizer(target: self,
+                                                   action:#selector(handleSwipe(sender:)))
+            
+            gesture.direction = direction
+            self.view.addGestureRecognizer(gesture)
+            
+        }
+    }
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer)
+    {
+        
+        let vc = ViewController()
+        self.present(vc, animated: true)
         
     }
     
@@ -59,8 +81,17 @@ class TableViewController: UITableViewController {
             
         }
         
-        cell.textLabel?.text = ImageEntity.imageArray[indexPath.row]
+        cell.textLabel?.text = ImageEntity.imageArray[indexPath.row].description
         return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        
+        ImageEntity.imageArray.remove(at: indexPath.row)
+        
+        tableView.reloadData()
         
     }
     

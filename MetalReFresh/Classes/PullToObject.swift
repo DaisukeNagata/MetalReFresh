@@ -19,7 +19,7 @@ public class PullToObject:NSObject{
     var timer: Timer!
     var viewSet : UITableView!
     var alphaView = UIView()
-    open var imageCount = 5
+    open var imageCount = 0
     
     public func timerSet(view:UITableView)
     {
