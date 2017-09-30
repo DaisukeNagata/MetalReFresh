@@ -60,10 +60,9 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
     }
     
-    func cGImageForImageNamed(imageName:String)->CGImage
+    func cGImageForImageNamed(image:UIImage)->CGImage
     {
-        let image = UIImage(named: imageName)
-        return (image?.cgImage)!
+        return image.cgImage!
     }
     
     func buildRenderResources()
@@ -71,7 +70,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         // Use MTKTextureLoader to load a texture we will use to colorize the simulation
         let textureLoader  = MTKTextureLoader.init(device: device)
         
-        let colorMapCGImage = self.cGImageForImageNamed(imageName: ImageEntity.imageArray[imageCount])
+        let colorMapCGImage = self.cGImageForImageNamed(image: ImageEntity.imageArray[imageCount])
         
         do{
             colorMap = try textureLoader.newTexture(with: colorMapCGImage, options: [:])

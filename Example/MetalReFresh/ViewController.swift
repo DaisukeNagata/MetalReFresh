@@ -7,18 +7,159 @@
 //
 
 import UIKit
+import MetalReFresh
+import AVFoundation
+import AssetsLibrary
+import Photos
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    private var cameraView = UIImageView()
+    private var cameraViewRoll = UIImageView()
+    private var captureSession : AVCaptureSession!
+    private var stillImageOutput : AVCapturePhotoOutput?
+    private var previewLayer: AVCaptureVideoPreviewLayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        captureSession = AVCaptureSession()
+        stillImageOutput = AVCapturePhotoOutput()
+        previewLayer = AVCaptureVideoPreviewLayer()
+        
+        captureSession.sessionPreset = AVCaptureSessionPreset1280x720
+        
+        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        do {
+            
+            let input = try AVCaptureDeviceInput(device: device)
+            
+            if (captureSession.canAddInput(input)) {
+                captureSession.addInput(input)
+                
+                if (captureSession.canAddOutput(stillImageOutput)) {
+                    captureSession.addOutput(stillImageOutput)
+                    
+                    captureSession.startRunning()
+                    
+                    previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                    previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+                    previewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
+                    previewLayer?.position = CGPoint(x:self.view.frame.width,y:self.view.frame.height/2)
+                    
+                    cameraView.frame = self.view.frame
+                    previewLayer?.frame = cameraView.frame
+                    
+                    cameraView.layer.addSublayer(previewLayer!)
+                    self.view.addSubview(cameraView)
+                    
+                }
+            }
+        }catch{
+            
+        }
+        
+        swipeMethod()
+        
     }
+    
+    private func swipeMethod()
+    {
+        
+        let directions: [UISwipeGestureRecognizerDirection] = [.right, .left, .up, .down]
+        for direction in directions {
+            let gesture = UISwipeGestureRecognizer(target: self,
+                                                   action:#selector(handleSwipe(sender:)))
+            
+            gesture.direction = direction
+            self.view.addGestureRecognizer(gesture)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        }
     }
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer)
+    {
+        
+        // フラッシュとかカメラの細かな設定
+        let settingsForMonitoring = AVCapturePhotoSettings()
+        settingsForMonitoring.flashMode = .auto
+        settingsForMonitoring.isAutoStillImageStabilizationEnabled = true
+        settingsForMonitoring.isHighResolutionPhotoEnabled = false
+        self.stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
+        
+    }
+    
+    //MARK: -AVCapturePhotoOutput Method
+    internal func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?)
+    {
+        
+        if let photoSampleBuffer = photoSampleBuffer {
+            
+            let photoData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)
+            let photoDataImage = UIImage(data: photoData!)
+            cameraView.image = photoDataImage
 
+            ImageEntity.imageArray.append(photoDataImage!)
+            
+            UIImageWriteToSavedPhotosAlbum(photoDataImage!, nil, nil, nil)
+            openCameraRoll()
+        }
+    }
+    //MARK: -UIImagePickerController delegate
+    func openCameraRoll()
+    {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+        {
+            
+            let pickerView = UIImagePickerController()
+            pickerView.sourceType = .photoLibrary
+            pickerView.delegate = self
+            
+            self.present(pickerView, animated: true)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        
+        cameraView.removeFromSuperview()
+ 
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        self.cameraViewRoll.frame = self.view.frame
+        self.cameraViewRoll.image = image
+        
+        self.view.addSubview(cameraViewRoll)
+        self.dismiss(animated: true, completion: nil)
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let table = storyboard.instantiateViewController(withIdentifier: "tableViewController") as! UINavigationController
+ 
+        present(table, animated: true, completion: nil)
+        
+    }
 }
 
+//MARK - Size　Variable
+/*
+extension UIImage {
+    func cropping(to: CGRect) -> UIImage? {
+        var opaque = false
+        if let cgImage = cgImage {
+            switch cgImage.alphaInfo {
+            case .noneSkipLast, .noneSkipFirst:
+                opaque = true
+            default:
+                break
+            }
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(to.size, opaque, scale)
+        draw(at: CGPoint(x: -to.origin.x, y: -to.origin.y))
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
+    }
+}
+*/

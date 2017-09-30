@@ -7,7 +7,7 @@
 //
 
 public struct ImageEntity {
-    
-    public static var imageArray = ["sora","machi","yama","sabaku","mori"]
+
+    public static var imageArray :Array<UIImage> = []
     
 }
