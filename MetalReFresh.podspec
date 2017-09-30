@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MetalReFresh'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'A new function was added.'
 
 # This description is used to generate tags and improve search results.
@@ -28,10 +28,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/daisukenagata/MetalReFresh.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
-  s.platform     = :ios, '10.0'
+  s.platform     = :ios, '11.0'
   s.source_files = 'MetalReFresh/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'MetalReFresh' => ['MetalReFresh/Assets/*.png']
   # }
