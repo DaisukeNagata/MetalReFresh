@@ -1,11 +1,12 @@
 use_frameworks!
 
 target 'MetalReFresh_Example' do
-  pod 'MetalReFresh', :path => '../'
-
-  target 'MetalReFresh_Tests' do
-    inherit! :search_paths
-
+    platform :ios, '10.0'
+    pod 'MetalReFresh', :path => '../'
     
-  end
+    target 'MetalReFresh_Tests' do
+        inherit! :search_paths
+        
+        
+    end
 end
