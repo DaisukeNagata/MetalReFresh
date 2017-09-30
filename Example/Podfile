@@ -1,7 +1,6 @@
 use_frameworks!
 
 target 'MetalReFresh_Example' do
-    platform :ios, '10.0'
     pod 'MetalReFresh', :path => '../'
     
     target 'MetalReFresh_Tests' do
