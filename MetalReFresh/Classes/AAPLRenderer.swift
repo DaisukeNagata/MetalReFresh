@@ -16,6 +16,7 @@ var kCellValueDead = 255
 var kMaxInflightBuffers = 3
 
 
+@available(iOS 9.0, *)
 class AAPLRenderer:NSObject,MTKViewDelegate {
     
     var mtkView : MTKView!
@@ -48,7 +49,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         mtkView = view
         mtkView.delegate = self
         device = mtkView.device
-        library = device.makeDefaultLibrary()
+        library = device.newDefaultLibrary()
         commandQueue = device.makeCommandQueue()
         
         textureQueue.reserveCapacity(kTextureCount)
@@ -73,7 +74,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         let colorMapCGImage = self.cGImageForImageNamed(image: ImageEntity.imageArray[imageCount])
         
         do{
-            colorMap = try textureLoader.newTexture(cgImage: colorMapCGImage, options: [:])
+            colorMap = try textureLoader.newTexture(with: colorMapCGImage, options: [:])
             
         }catch{}
         
@@ -187,7 +188,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         for _ in 0...kTextureCount-1{
             let texture = device.makeTexture(descriptor: descriptor)
-            texture?.label = "Game State"
+            texture.label = "Game State"
             textureQueue.append(texture)
             
         }
@@ -222,12 +223,12 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         let threadsPerThreadgroup = MTLSizeMake(3, 3, 1)
         let threadgroupCount = MTLSizeMake((self.gridSize.width/threadsPerThreadgroup.width), (self.gridSize.height/threadsPerThreadgroup.height), 1)
         
-        commandEncoder?.setComputePipelineState(self.simulationPipelineState)
-        commandEncoder?.setTexture(readTexture!, index: 0)
-        commandEncoder?.setTexture(writeTexture!, index: 1)
+        commandEncoder.setComputePipelineState(self.simulationPipelineState)
+        commandEncoder.setTexture(readTexture!, at: 0)
+        commandEncoder.setTexture(writeTexture!, at: 1)
         
-        commandEncoder?.setSamplerState(self.samplerState, index: 0)
-        commandEncoder?.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
+        commandEncoder.setSamplerState(self.samplerState, at: 0)
+        commandEncoder.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
         
         if self.activationPoints.count > 0 && Int(self.pointSet.x) != 0 {
             
@@ -246,17 +247,17 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             let threadsPerThreadgroup = MTLSize(width: self.activationPoints.count,height: 1,depth: 1)
             let threadgroupCount = MTLSize(width:Int(self.pointSet.x),height: Int(self.pointSet.y),depth: 1)
             
-            commandEncoder?.setComputePipelineState(self.activationPipelineState)
-            commandEncoder?.setTexture(writeTexture!, index: 0)
-            commandEncoder?.setBytes(cellPositions, length: byteCount, index: 0)
+            commandEncoder.setComputePipelineState(self.activationPipelineState)
+            commandEncoder.setTexture(writeTexture!, at: 0)
+            commandEncoder.setBytes(cellPositions, length: byteCount, at: 0)
             
-            commandEncoder?.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
+            commandEncoder.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
             
             self.activationPoints.removeAll()
             
         }
         
-        commandEncoder?.endEncoding()
+        commandEncoder.endEncoding()
         
         self.currentGameStateTexture = self.textureQueue.first!!
         self.textureQueue.remove(at: 0)
@@ -271,14 +272,14 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             
             let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor!)
             
-            renderEncoder?.setRenderPipelineState(self.renderPipelineState)
-            renderEncoder?.setVertexBuffer(vetexBuffer, offset: 0, index: 0)
-            renderEncoder?.setFragmentTexture(self.currentGameStateTexture, index: 0)
-            renderEncoder?.setFragmentTexture(self.colorMap, index: 1)
+            renderEncoder.setRenderPipelineState(self.renderPipelineState)
+            renderEncoder.setVertexBuffer(vetexBuffer, offset: 0, at: 0)
+            renderEncoder.setFragmentTexture(self.currentGameStateTexture, at: 0)
+            renderEncoder.setFragmentTexture(self.colorMap, at: 1)
             
-            renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
+            renderEncoder.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
             
-            renderEncoder?.endEncoding()
+            renderEncoder.endEncoding()
             
             commandBuffer.present(self.mtkView.currentDrawable!)
         }
@@ -302,14 +303,16 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         self.inflightSemaphore.wait()
         let commandBuffer = self.commandQueue.makeCommandBuffer()
         
-        commandBuffer?.addCompletedHandler {  (_) in
+        commandBuffer.addCompletedHandler {  (_) in
             self.inflightSemaphore.signal()
         }
         
-        self.encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
-        self.encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
+        self.encodeComputeWorkInBuffer(commandBuffer: commandBuffer)
+        self.encodeRenderWorkInBuffer(commandBuffer: commandBuffer)
         
-        commandBuffer?.commit()
+        commandBuffer.commit()
         
     }
 }
+
+
