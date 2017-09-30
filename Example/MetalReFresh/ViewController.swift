@@ -27,24 +27,24 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         stillImageOutput = AVCapturePhotoOutput()
         previewLayer = AVCaptureVideoPreviewLayer()
         
-        captureSession.sessionPreset = AVCaptureSessionPreset1280x720
+        captureSession.sessionPreset = AVCaptureSession.Preset.hd1280x720
         
-        let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        let device = AVCaptureDevice.default(for: AVMediaType.video)
         do {
             
-            let input = try AVCaptureDeviceInput(device: device)
+            let input = try AVCaptureDeviceInput(device: device!)
             
             if (captureSession.canAddInput(input)) {
                 captureSession.addInput(input)
                 
-                if (captureSession.canAddOutput(stillImageOutput)) {
-                    captureSession.addOutput(stillImageOutput)
+                if (captureSession.canAddOutput(stillImageOutput!)) {
+                    captureSession.addOutput(stillImageOutput!)
                     
                     captureSession.startRunning()
                     
                     previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                    previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-                    previewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
+                    previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+                    previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
                     previewLayer?.position = CGPoint(x:self.view.frame.width,y:self.view.frame.height/2)
                     
                     cameraView.frame = self.view.frame
@@ -90,7 +90,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
     }
     
     //MARK: -AVCapturePhotoOutput Method
-    internal func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?)
+    internal func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?)
     {
         
         if let photoSampleBuffer = photoSampleBuffer {
