@@ -121,6 +121,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
             openCameraRoll()
         }
     }
+    
     //MARK: -UIImagePickerController delegate
     func openCameraRoll()
     {
