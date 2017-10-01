@@ -91,7 +91,16 @@ class TableViewController: UITableViewController {
         
         ImageEntity.imageArray.remove(at: indexPath.row)
         
+        if ImageEntity.imageArray.count-1 != 0 {
+            
         self.pull.imageCount = ImageEntity.imageArray.count-1
+            
+        }else{
+            
+        self.pull.imageCount = ImageEntity.imageArray.count
+            
+        }
+        
         tableView.reloadData()
         
     }
