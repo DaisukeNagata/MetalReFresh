@@ -66,10 +66,19 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
     private func swipeMethod()
     {
         
-        let directions: [UISwipeGestureRecognizerDirection] = [.right, .left, .up, .down]
-        for direction in directions {
+        let leftRightdirections: [UISwipeGestureRecognizerDirection] = [.right, .left]
+        for direction in leftRightdirections {
             let gesture = UISwipeGestureRecognizer(target: self,
-                                                   action:#selector(handleSwipe(sender:)))
+                                                   action:#selector(handleLeftRightSwipe(sender:)))
+            
+            gesture.direction = direction
+            self.view.addGestureRecognizer(gesture)
+        }
+        
+        let upDowndirections: [UISwipeGestureRecognizerDirection] = [.up, .down]
+        for direction in upDowndirections {
+            let gesture = UISwipeGestureRecognizer(target: self,
+                                                   action:#selector(handleUoDownSwipe(sender:)))
             
             gesture.direction = direction
             self.view.addGestureRecognizer(gesture)
@@ -77,7 +86,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         }
     }
     
-    @objc func handleSwipe(sender: UISwipeGestureRecognizer)
+    @objc func handleLeftRightSwipe(sender: UISwipeGestureRecognizer)
     {
         
         // フラッシュとかカメラの細かな設定
@@ -86,6 +95,13 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         settingsForMonitoring.isAutoStillImageStabilizationEnabled = true
         settingsForMonitoring.isHighResolutionPhotoEnabled = false
         self.stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
+        
+    }
+    
+    @objc func handleUoDownSwipe(sender: UISwipeGestureRecognizer)
+    {
+        
+       openCameraRoll()
         
     }
     
@@ -129,6 +145,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         
         self.cameraViewRoll.frame = self.view.frame
         self.cameraViewRoll.image = image
+        ImageEntity.imageArray.append(image)
         
         self.view.addSubview(cameraViewRoll)
         self.dismiss(animated: true, completion: nil)
