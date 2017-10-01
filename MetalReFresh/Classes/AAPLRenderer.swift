@@ -88,14 +88,14 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         let vertexData :  Array<Float> =  {
             [
-                -1,  1, 0, 0,
-                -1, -1, 0, 1,
-                1, -1, 1, 1,
-                1, -1, 1, 1,
-                1,  1, 1, 0,
-                -1,  1, 0, 0,
+               -1,  1,  0, 0,
+               -1, -1,  0, 1,
+                1, -1,  1, 1,
+                1, -1,  1, 1,
+                1,  1,  1, 0,
+               -1,  1,  0, 0,
                 
-                ]
+            ]
         }()
         
         // Full screen animation from 88

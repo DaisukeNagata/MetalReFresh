@@ -12,12 +12,23 @@ import MetalReFresh
 class TableViewController: UITableViewController {
     
     var pull = PullToObject()
+    var userArray = Array<Data>()
+    var imageUserArray = Array<UIImage>()
+    var imageData = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.refresh()
+        refresh()
         swipeMethod()
+      
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    
+        ImageEntity.imageArray = ObjectDefaults().setObject().0
+        
     }
     
     func refresh()
@@ -82,6 +93,7 @@ class TableViewController: UITableViewController {
         }
         
         cell.textLabel?.text = ImageEntity.imageArray[indexPath.row].description
+        
         return cell
         
     }
@@ -89,9 +101,11 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         
+        ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         ImageEntity.imageArray.remove(at: indexPath.row)
+      
         
-        if ImageEntity.imageArray.count-1 != 0 {
+        if ObjectDefaults().setObject().0.count-1 != 0 {
             
         self.pull.imageCount = ImageEntity.imageArray.count-1
             
