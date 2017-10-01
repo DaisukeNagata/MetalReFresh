@@ -115,8 +115,6 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
             let photoDataImage = UIImage(data: photoData!)
             cameraView.image = photoDataImage
 
-            ImageEntity.imageArray.append(photoDataImage!)
-            
             UIImageWriteToSavedPhotosAlbum(photoDataImage!, nil, nil, nil)
             openCameraRoll()
         }
