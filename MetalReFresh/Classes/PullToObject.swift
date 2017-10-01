@@ -74,7 +74,7 @@ public class PullToObject:NSObject{
                                           height:UIScreen.main.bounds.size.height)
             
             self.alphaView.backgroundColor = UIColor.black
-            self.alphaView.alpha = 0.1
+            self.alphaView.alpha = 0.3
             self.viewSet.addSubview(self.alphaView)
         
             self.metalView = MTKView()
