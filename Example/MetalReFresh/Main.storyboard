@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,22 +54,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQu-hp-LHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="66" y="609"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="N7s-qX-ceq">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hnw-GA-05n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="ScZ-0i-HAN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9lC-P2-sd5">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="DPz-6h-P8b" kind="relationship" relationship="rootViewController" id="vO4-4E-VvA"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-687" y="-30"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fum-6u-NOb">
