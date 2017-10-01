@@ -91,6 +91,7 @@ class TableViewController: UITableViewController {
         
         ImageEntity.imageArray.remove(at: indexPath.row)
         
+        self.pull.imageCount = ImageEntity.imageArray.count-1
         tableView.reloadData()
         
     }
