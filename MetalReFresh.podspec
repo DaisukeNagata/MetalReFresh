@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MetalReFresh'
-  s.version          = '0.2.4'
-  s.summary          = 'A new function was added.'
+  s.version          = '0.2.5'
+  s.summary          = 'Scrolling UI table. Tap to reset. Transition to right swipe camera function. Shoot left and right. Transition to picture selection table of up and down swipe library.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
