@@ -113,7 +113,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
     @objc func handleDownSwipe(sender: UISwipeGestureRecognizer)
     {
         
-        self.dismiss(animated: true, completion: nil)
+      self.dismiss(animated: true, completion: nil)
         
     }
     

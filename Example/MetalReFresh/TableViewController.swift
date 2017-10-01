@@ -55,15 +55,14 @@ class TableViewController: UITableViewController {
     private func swipeMethod()
     {
         
-        let directions: [UISwipeGestureRecognizerDirection] = [.right]
-        for direction in directions {
+        let directions: UISwipeGestureRecognizerDirection = .right
+
             let gesture = UISwipeGestureRecognizer(target: self,
                                                    action:#selector(handleSwipe(sender:)))
             
-            gesture.direction = direction
+            gesture.direction = directions
             self.view.addGestureRecognizer(gesture)
             
-        }
     }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer)
