@@ -12,8 +12,7 @@ To run the example project, clone the repo, and run pod install from the Example
 
 How to
 
-
-Scrolling UI table. Tappley set. Right swipe transition. Shoot camera with left and right swipe. Swipe up  down Switches to photo selection table.
+Scroll UI table. Tabliset. Right Swipe Rain Shoot the camera with left and right swipe. There is a break in the up swipe photo selection table. Down swipe table transition
 
 
 ## Installation
