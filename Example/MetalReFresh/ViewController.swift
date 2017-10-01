@@ -75,15 +75,20 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
             self.view.addGestureRecognizer(gesture)
         }
         
-        let upDowndirections: [UISwipeGestureRecognizerDirection] = [.up, .down]
-        for direction in upDowndirections {
+        let updirection: UISwipeGestureRecognizerDirection = .up
             let gesture = UISwipeGestureRecognizer(target: self,
-                                                   action:#selector(handleUoDownSwipe(sender:)))
+                                                   action:#selector(handleUpSwipe(sender:)))
             
-            gesture.direction = direction
+            gesture.direction = updirection
             self.view.addGestureRecognizer(gesture)
+        
+        let downdirection: UISwipeGestureRecognizerDirection = .down
+        let gestureDown = UISwipeGestureRecognizer(target: self,
+                                               action:#selector(handleDownSwipe(sender:)))
+        
+        gestureDown.direction = downdirection
+        self.view.addGestureRecognizer(gestureDown)
 
-        }
     }
     
     @objc func handleLeftRightSwipe(sender: UISwipeGestureRecognizer)
@@ -98,10 +103,17 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         
     }
     
-    @objc func handleUoDownSwipe(sender: UISwipeGestureRecognizer)
+    @objc func handleUpSwipe(sender: UISwipeGestureRecognizer)
     {
         
        openCameraRoll()
+        
+    }
+    
+    @objc func handleDownSwipe(sender: UISwipeGestureRecognizer)
+    {
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     
