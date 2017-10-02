@@ -12,9 +12,6 @@ import MetalReFresh
 class TableViewController: UITableViewController {
     
     var pull = PullToObject()
-    var userArray = Array<Data>()
-    var imageUserArray = Array<UIImage>()
-    var imageData = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
