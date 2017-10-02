@@ -104,7 +104,7 @@ class TableViewController: UITableViewController {
         ImageEntity.imageArray.remove(at: indexPath.row)
       
         
-        if ObjectDefaults().setObject().0.count-1 != 0 {
+        if ObjectDefaults().setObject().0.count != 0 {
             
         self.pull.imageCount = ImageEntity.imageArray.count-1
             
