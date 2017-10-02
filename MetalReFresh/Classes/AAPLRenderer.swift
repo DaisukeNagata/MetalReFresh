@@ -10,11 +10,6 @@ import UIKit
 import MetalKit
 
 var kTextureCount = 3
-var kInitialAliveProbability = 0.1
-var kCellValueAlive = 0
-var kCellValueDead = 255
-var kMaxInflightBuffers = 3
-
 
 @available(iOS 9.0, *)
 class AAPLRenderer:NSObject,MTKViewDelegate {
@@ -71,6 +66,10 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         guard ImageEntity.imageArray.count != 0 else {
             return
+        }
+        
+        if ImageEntity.imageArray.count == 1 {
+            imageCount = 0
         }
         // Use MTKTextureLoader to load a texture we will use to colorize the simulation
         let textureLoader  = MTKTextureLoader.init(device: device)
