@@ -1,6 +1,6 @@
 {
   "name": "MetalReFresh",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "summary": "A short description of MetalReFresh.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/daisuke nagata/MetalReFresh",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/daisuke nagata/MetalReFresh.git",
-    "tag": "0.2.7"
+    "tag": "0.2.8"
   },
   "platforms": {
     "ios": "11.0"
