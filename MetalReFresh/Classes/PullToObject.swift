@@ -14,15 +14,21 @@ import MetalKit
 @available(iOS 9.0, *)
 public class PullToObject:NSObject{
     
-    var metalView: MTKView!
+    open var metalView: MTKView!
     var aAPLRenderer = AAPLRenderer()
     var timer: Timer!
     var viewSet : UITableView!
     var alphaView = UIView()
     open var imageCount = 0
     
-    public func timerSet(view:UITableView)
+    public func timerSet(view:UITableView?)
     {
+        guard view != nil else {
+            
+            return
+            
+        }
+        
         self.viewSet = view
         timer = Timer.scheduledTimer(timeInterval: 5.0,
                                      target: self,

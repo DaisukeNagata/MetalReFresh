@@ -49,10 +49,10 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         textureQueue.reserveCapacity(kTextureCount)
         
-        self.buildRenderResources()
-        self.buildRenderPipeline()
-        self.buildComputePipelines()
-        self.reshapeWithDrawableSize(drawableSize:mtkView.drawableSize)
+        buildRenderResources()
+        buildRenderPipeline()
+        buildComputePipelines()
+        reshapeWithDrawableSize(drawableSize:mtkView.drawableSize)
         
     }
     
@@ -74,7 +74,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         // Use MTKTextureLoader to load a texture we will use to colorize the simulation
         let textureLoader  = MTKTextureLoader.init(device: device)
 
-        let colorMapCGImage = self.cGImageForImageNamed(image: ImageEntity.imageArray[imageCount])
+        let colorMapCGImage = cGImageForImageNamed(image: ImageEntity.imageArray[imageCount])
         
         do{
             colorMap = try textureLoader.newTexture(cgImage: colorMapCGImage, options: [:])
@@ -127,7 +127,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         pipelineStateDescriptor.vertexFunction = vertexProgram
         pipelineStateDescriptor.fragmentFunction = fragmentProgram
         pipelineStateDescriptor.vertexDescriptor = vertexDescriptor
-        pipelineStateDescriptor.colorAttachments[0].pixelFormat = self.mtkView.colorPixelFormat
+        pipelineStateDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat
         
         do{
             renderPipelineState = try device.makeRenderPipelineState(descriptor: pipelineStateDescriptor)
@@ -169,12 +169,12 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     func reshapeWithDrawableSize(drawableSize:CGSize)
     {
         
-        let scale = self.mtkView.layer.contentsScale
+        let scale = mtkView.layer.contentsScale
         let proposedGridSize = MTLSize(width: Int(drawableSize.width/scale), height: Int(drawableSize.height/scale), depth: 1)
         
         gridSize = proposedGridSize
         
-        self.buildComputeResources()
+        buildComputeResources()
         
     }
     
@@ -210,35 +210,35 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     func activateRandomCellsInNeighborhoodOfCell(cell:CGPoint)
     {
         pointSet = cell
-        self.activationPoints.append(NSValue(cgPoint: cell))
+        activationPoints.append(NSValue(cgPoint: cell))
     }
     
     //MARK: - Render and Compute Encoding
     func encodeComputeWorkInBuffer(commandBuffer:MTLCommandBuffer)
     {
         
-        let readTexture = self.textureQueue.last
-        let writeTexture = self.textureQueue.first
+        let readTexture = textureQueue.last
+        let writeTexture = textureQueue.first
         
         let commandEncoder = commandBuffer.makeComputeCommandEncoder()
         
         //Returns the specified size of an object, such as a texture or threadgroup.
         let threadsPerThreadgroup = MTLSizeMake(3, 3, 1)
-        let threadgroupCount = MTLSizeMake((self.gridSize.width/threadsPerThreadgroup.width), (self.gridSize.height/threadsPerThreadgroup.height), 1)
+        let threadgroupCount = MTLSizeMake((gridSize.width/threadsPerThreadgroup.width), (gridSize.height/threadsPerThreadgroup.height), 1)
         
-        commandEncoder?.setComputePipelineState(self.simulationPipelineState)
+        commandEncoder?.setComputePipelineState(simulationPipelineState)
         commandEncoder?.setTexture(readTexture!, index: 0)
         commandEncoder?.setTexture(writeTexture!, index: 1)
         
-        commandEncoder?.setSamplerState(self.samplerState, index: 0)
+        commandEncoder?.setSamplerState(samplerState, index: 0)
         commandEncoder?.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
         
-        if self.activationPoints.count > 0 && Int(self.pointSet.x) != 0 {
+        if activationPoints.count > 0 && Int(pointSet.x) != 0 {
             
-            let byteCount = self.activationPoints.count * 2 * MemoryLayout.size(ofValue: 1)
+            let byteCount = activationPoints.count * 2 * MemoryLayout.size(ofValue: 1)
             var cellPositions  = [(byteCount,byteCount)]
             
-            for (_, byteCount) in self.activationPoints.enumerated() {
+            for (_, byteCount) in activationPoints.enumerated() {
                 
                 var point = CGPoint()
                 byteCount?.getValue(&point)
@@ -247,44 +247,44 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
                 
             }
             
-            let threadsPerThreadgroup = MTLSize(width: self.activationPoints.count,height: 1,depth: 1)
-            let threadgroupCount = MTLSize(width:Int(self.pointSet.x),height: Int(self.pointSet.y),depth: 1)
+            let threadsPerThreadgroup = MTLSize(width: activationPoints.count,height: 1,depth: 1)
+            let threadgroupCount = MTLSize(width:Int(pointSet.x),height: Int(pointSet.y),depth: 1)
             
-            commandEncoder?.setComputePipelineState(self.activationPipelineState)
+            commandEncoder?.setComputePipelineState(activationPipelineState)
             commandEncoder?.setTexture(writeTexture!, index: 0)
             commandEncoder?.setBytes(cellPositions, length: byteCount, index: 0)
             
             commandEncoder?.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
             
-            self.activationPoints.removeAll()
+            activationPoints.removeAll()
             
         }
         
         commandEncoder?.endEncoding()
         
-        self.currentGameStateTexture = self.textureQueue.first!!
-        self.textureQueue.remove(at: 0)
-        self.textureQueue.append(self.currentGameStateTexture)
+        currentGameStateTexture = textureQueue.first!!
+        textureQueue.remove(at: 0)
+        textureQueue.append(currentGameStateTexture)
     }
     
     func encodeRenderWorkInBuffer(commandBuffer:MTLCommandBuffer)
     {
-        let renderPassDescriptor = self.mtkView.currentRenderPassDescriptor
+        let renderPassDescriptor = mtkView.currentRenderPassDescriptor
         
         if renderPassDescriptor != nil {
             
             let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor!)
             
-            renderEncoder?.setRenderPipelineState(self.renderPipelineState)
+            renderEncoder?.setRenderPipelineState(renderPipelineState)
             renderEncoder?.setVertexBuffer(vetexBuffer, offset: 0, index: 0)
-            renderEncoder?.setFragmentTexture(self.currentGameStateTexture, index: 0)
-            renderEncoder?.setFragmentTexture(self.colorMap, index: 1)
+            renderEncoder?.setFragmentTexture(currentGameStateTexture, index: 0)
+            renderEncoder?.setFragmentTexture(colorMap, index: 1)
             
             renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
             
             renderEncoder?.endEncoding()
             
-            commandBuffer.present(self.mtkView.currentDrawable!)
+            commandBuffer.present(mtkView.currentDrawable!)
         }
         
     }
@@ -292,7 +292,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize)
     {
         let resizeHysteresis : TimeInterval = 0.200
-        self.nextResizeTimestamp = Date.init(timeIntervalSinceNow: resizeHysteresis)
+        nextResizeTimestamp = Date.init(timeIntervalSinceNow: resizeHysteresis)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + resizeHysteresis) {
             if self.nextResizeTimestamp.timeIntervalSinceNow <= 0 {
@@ -303,15 +303,15 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     
     func draw(in view: MTKView)
     {
-        self.inflightSemaphore.wait()
-        let commandBuffer = self.commandQueue.makeCommandBuffer()
+        inflightSemaphore.wait()
+        let commandBuffer = commandQueue.makeCommandBuffer()
         
         commandBuffer?.addCompletedHandler {  (_) in
             self.inflightSemaphore.signal()
         }
         
-        self.encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
-        self.encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
+        encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
+        encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
         
         commandBuffer?.commit()
         

@@ -30,7 +30,7 @@ class TableViewController: UITableViewController {
     
     func refresh()
     {
-        self.refreshControl = UIRefreshControl()
+        refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshSet), for: UIControlEvents.valueChanged)
         refreshControl?.alpha = 0
     }
@@ -39,12 +39,20 @@ class TableViewController: UITableViewController {
     {
         if  ImageEntity.imageArray.count == 0 {
             
-            self.pull.imageCount = 0
+            pull.imageCount = 0
             
         }
         
+        guard ObjectDefaults().setObject().1 !=  0 else {
+            
+            refreshControl?.endRefreshing()
+            tableReload()
+            
+            return
+        }
+        
         tableView.reloadData()
-        self.pull.timerSet(view:self.tableView)
+        pull.timerSet(view:self.tableView)
         tableView.isScrollEnabled = false
         
     }
@@ -53,13 +61,13 @@ class TableViewController: UITableViewController {
     {
         
         let directions: UISwipeGestureRecognizerDirection = .right
-
-            let gesture = UISwipeGestureRecognizer(target: self,
-                                                   action:#selector(handleSwipe(sender:)))
-            
-            gesture.direction = directions
-            self.view.addGestureRecognizer(gesture)
-            
+        
+        let gesture = UISwipeGestureRecognizer(target: self,
+                                               action:#selector(handleSwipe(sender:)))
+        
+        gesture.direction = directions
+        self.view.addGestureRecognizer(gesture)
+        
     }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer)
@@ -84,7 +92,7 @@ class TableViewController: UITableViewController {
         
         for _ in 0...0{
             
-            self.refresh()
+            refresh()
             
         }
         
@@ -99,14 +107,22 @@ class TableViewController: UITableViewController {
         
         ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         ImageEntity.imageArray.remove(at: indexPath.row)
-      
+        
         if ObjectDefaults().setObject().0.count != 0 {
             
-        self.pull.imageCount = ImageEntity.imageArray.count-1
+            pull.imageCount = ImageEntity.imageArray.count-1
             
         }else{
-
-        self.pull.imageCount = 0
+            
+            pull.imageCount = 0
+            
+            tableReload()
+            
+            if pull.metalView != nil {
+                
+                pull.metalView.removeFromSuperview()
+                
+            }
             
         }
         
@@ -117,12 +133,19 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
-        self.pull.invalidate()
+        pull.invalidate()
+        
+        tableReload()
+        
+        pull.imageCount = indexPath.row
+        
+    }
+    
+    func tableReload()
+    {
         
         tableView.isScrollEnabled = true
         tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
-        
-        self.pull.imageCount = indexPath.row
         
     }
 }
