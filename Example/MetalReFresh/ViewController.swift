@@ -154,8 +154,8 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
  
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        self.cameraViewRoll.frame = self.view.frame
-        self.cameraViewRoll.image = image
+        cameraViewRoll.frame = self.view.frame
+        cameraViewRoll.image = image
         ImageEntity.imageArray.append(image)
         
         _ = ObjectDefaults().objectDefaults(index:ImageEntity.imageArray.count,images: ImageEntity.imageArray)
