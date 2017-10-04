@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MetalKit
 import MetalReFresh
 
 class TableViewController: UITableViewController {
@@ -45,6 +46,7 @@ class TableViewController: UITableViewController {
         
         guard ObjectDefaults().setObject().1 !=  0 else {
             
+            pull.invalidate()
             refreshControl?.endRefreshing()
             tableReload()
             
