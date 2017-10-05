@@ -165,7 +165,6 @@
 		9050A2AC9609781E6D187A558A19E2CA /* MetalReFresh */ = {
 			isa = PBXGroup;
 			children = (
-				BB7D8D131F815285003EAF96 /* Shaders.metal */,
 				F916D41E16B3EDC6588C35E0AA950A83 /* Classes */,
 			);
 			path = MetalReFresh;
@@ -217,6 +216,7 @@
 		F3AF317F258EA513A68F01D8E3A3146E /* MetalReFresh */ = {
 			isa = PBXGroup;
 			children = (
+				BB7D8D131F815285003EAF96 /* Shaders.metal */,
 				9050A2AC9609781E6D187A558A19E2CA /* MetalReFresh */,
 				73BE9A994B426078564377DF09509252 /* Support Files */,
 			);

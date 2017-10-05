@@ -112,19 +112,15 @@ class TableViewController: UITableViewController {
         
         if ObjectDefaults().setObject().0.count != 0 {
             
-            pull.imageCount = ImageEntity.imageArray.count-1
+            pull.imageCount = ObjectDefaults().setObject().0.count
             
         }else{
+            
+            pull.invalidate()
             
             pull.imageCount = 0
             
             tableReload()
-            
-            if pull.metalView != nil {
-                
-                pull.metalView.removeFromSuperview()
-                
-            }
             
         }
         
