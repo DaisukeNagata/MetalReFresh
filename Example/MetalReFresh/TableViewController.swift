@@ -44,9 +44,8 @@ class TableViewController: UITableViewController {
             
         }
         
-        guard ObjectDefaults().setObject().1 !=  0 else {
+        guard ImageEntity.imageArray.count !=  0 else {
             
-            pull.invalidate()
             refreshControl?.endRefreshing()
             tableReload()
             
@@ -110,7 +109,7 @@ class TableViewController: UITableViewController {
         ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         ImageEntity.imageArray.remove(at: indexPath.row)
         
-        if ObjectDefaults().setObject().0.count != 0 {
+        if ImageEntity.imageArray.count != 0 {
             
             pull.imageCount = ObjectDefaults().setObject().0.count
             
@@ -131,8 +130,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
-        pull.invalidate()
-        
         tableReload()
         
         pull.imageCount = indexPath.row
@@ -141,6 +138,13 @@ class TableViewController: UITableViewController {
     
     func tableReload()
     {
+        
+        if  pull.metalView != nil {
+            
+            pull.metalView.removeFromSuperview()
+            pull.metalView = nil
+            
+        }
         
         tableView.isScrollEnabled = true
         tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
