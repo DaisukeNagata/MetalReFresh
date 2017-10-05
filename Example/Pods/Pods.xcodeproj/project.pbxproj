@@ -55,8 +55,8 @@
 		9787B35EE7FD6B3264F2453C4E074FBD /* Pods-MetalReFresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MetalReFresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		97A98D75BF55199964EF9D5809F60E82 /* Pods-MetalReFresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B6042D556ED221D39F06E3166185B768 /* Pods-MetalReFresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalReFresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BB784C371F868D46005B183D /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = Shaders.metal; path = MetalReFresh/Shaders.metal; sourceTree = "<group>"; };
 		BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDefaults.swift; sourceTree = "<group>"; };
-		BB7D8D131F815285003EAF96 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
 		BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
 		BBC90B411F7D852A0051DF7E /* AAPLRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLRenderer.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		F3AF317F258EA513A68F01D8E3A3146E /* MetalReFresh */ = {
 			isa = PBXGroup;
 			children = (
-				BB7D8D131F815285003EAF96 /* Shaders.metal */,
+				BB784C371F868D46005B183D /* Shaders.metal */,
 				9050A2AC9609781E6D187A558A19E2CA /* MetalReFresh */,
 				73BE9A994B426078564377DF09509252 /* Support Files */,
 			);
