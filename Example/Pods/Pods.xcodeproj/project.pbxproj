@@ -17,6 +17,8 @@
 		BBC90B461F7D852B0051DF7E /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */; };
 		BBC90B471F7D852B0051DF7E /* AAPLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B411F7D852A0051DF7E /* AAPLRenderer.swift */; };
 		BBC90B4A1F7D852B0051DF7E /* PullToObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B441F7D852B0051DF7E /* PullToObject.swift */; };
+		BBE5E0361F88F27A00325DAD /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5E0351F88F27A00325DAD /* TextManager.swift */; };
+		BBE5E0381F88F2DF00325DAD /* MessageManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5E0371F88F2DF00325DAD /* MessageManagement.swift */; };
 		C65318756A918FA0EA0AF4875503F771 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		CFF7770547777DDA89AF0159C9C29ABE /* Pods-MetalReFresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41DE89294A902FDB02110EE5F3E3432F /* Pods-MetalReFresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E05BB4BDCE08F487D6F3D564352F7468 /* Pods-MetalReFresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E186665D574C44A1E45E70A42A7B018 /* Pods-MetalReFresh_Tests-dummy.m */; };
@@ -55,12 +57,13 @@
 		9787B35EE7FD6B3264F2453C4E074FBD /* Pods-MetalReFresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MetalReFresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		97A98D75BF55199964EF9D5809F60E82 /* Pods-MetalReFresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B6042D556ED221D39F06E3166185B768 /* Pods-MetalReFresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalReFresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BB784C371F868D46005B183D /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = Shaders.metal; path = MetalReFresh/Shaders.metal; sourceTree = "<group>"; };
 		BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDefaults.swift; sourceTree = "<group>"; };
 		BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
 		BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
 		BBC90B411F7D852A0051DF7E /* AAPLRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLRenderer.swift; sourceTree = "<group>"; };
 		BBC90B441F7D852B0051DF7E /* PullToObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToObject.swift; sourceTree = "<group>"; };
+		BBE5E0351F88F27A00325DAD /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
+		BBE5E0371F88F2DF00325DAD /* MessageManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManagement.swift; sourceTree = "<group>"; };
 		BEB31E312F642BFEDF4DC14E244A0FF9 /* MetalReFresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetalReFresh-prefix.pch"; sourceTree = "<group>"; };
 		CB2BCA7B410FF87151CD4A3030A4A61A /* MetalReFresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetalReFresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7454ED7A8B6EF1BDB6CAEDA56400FE /* Pods-MetalReFresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MetalReFresh_Example.modulemap"; sourceTree = "<group>"; };
@@ -216,7 +219,6 @@
 		F3AF317F258EA513A68F01D8E3A3146E /* MetalReFresh */ = {
 			isa = PBXGroup;
 			children = (
-				BB784C371F868D46005B183D /* Shaders.metal */,
 				9050A2AC9609781E6D187A558A19E2CA /* MetalReFresh */,
 				73BE9A994B426078564377DF09509252 /* Support Files */,
 			);
@@ -232,6 +234,8 @@
 				BBC90B441F7D852B0051DF7E /* PullToObject.swift */,
 				BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */,
 				BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */,
+				BBE5E0351F88F27A00325DAD /* TextManager.swift */,
+				BBE5E0371F88F2DF00325DAD /* MessageManagement.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -371,8 +375,10 @@
 				BBC90B451F7D852B0051DF7E /* ImageEntity.swift in Sources */,
 				BBC90B4A1F7D852B0051DF7E /* PullToObject.swift in Sources */,
 				BBC90B461F7D852B0051DF7E /* ViewAnimation.swift in Sources */,
+				BBE5E0381F88F2DF00325DAD /* MessageManagement.swift in Sources */,
 				BB7D8D121F810FE1003EAF96 /* ObjectDefaults.swift in Sources */,
 				81D4BC5F65E71D9BB70E68689A404661 /* MetalReFresh-dummy.m in Sources */,
+				BBE5E0361F88F27A00325DAD /* TextManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
