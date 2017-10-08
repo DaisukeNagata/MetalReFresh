@@ -161,7 +161,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         _ = ObjectDefaults().objectDefaults(index:ImageEntity.imageArray.count,images: ImageEntity.imageArray)
         
         //Preparation of FileManager
-        TextManager().writeObject(st: ImageEntity.imageArray.description, index: ImageEntity.imageArray.count)
+        //TextManager().writeObject(images: ImageEntity.imageArray, index: ImageEntity.imageArray.count)
         self.view.addSubview(cameraViewRoll)
         self.dismiss(animated: true, completion: nil)
         
