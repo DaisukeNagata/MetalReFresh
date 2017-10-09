@@ -19,14 +19,7 @@ class TableViewController: UITableViewController {
         
         refresh()
         swipeMethod()
-      
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    
-        ImageEntity.imageArray = ObjectDefaults().setObject().0
-        
+        ImageEntity.imageArray = TextManager().readObject()!
     }
     
     func refresh()
@@ -82,7 +75,12 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         
-        return ImageEntity.imageArray.count
+        if  ImageEntity.imageArray.count == 0 {
+            
+            return 0
+        }
+        
+        return  1
         
     }
     
