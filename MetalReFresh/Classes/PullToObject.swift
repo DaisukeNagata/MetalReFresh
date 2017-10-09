@@ -63,7 +63,6 @@ public class PullToObject:NSObject{
             self.metalView = nil
             
             timer.invalidate()
-            self.timerSet(view:viewSet)
             alphaView.alpha = 0
             
         }
