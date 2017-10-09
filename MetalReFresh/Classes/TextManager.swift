@@ -11,13 +11,10 @@ public class TextManager: NSObject {
     
     let fileManager = FileManager.default
     var isDir : ObjCBool = true
+    let fileNamed = "saveMehod.text"
+    var uiImage = Array<UIImage>()
     
-    open static var indexCount = Int()
-    open var userDefaults = UserDefaults.standard
-    // ファイル名
-    let fileName = "saveMehod.text"
-    
-    public func saveMehod(images:[UIImage],index:Int)
+    public func saveMehod(images:[UIImage])
     {
         
         fileManager.fileExists(atPath: messageManagement.defaultsPath, isDirectory: &isDir)
@@ -25,48 +22,56 @@ public class TextManager: NSObject {
         if isDir.boolValue {
             
             try! fileManager.createDirectory(atPath: messageManagement.defaultsPath ,withIntermediateDirectories: true, attributes: nil)
+            let fileURL = URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed)
             
-            let fileObject = images.description+"\(index)"
             
-            try! fileObject.write(toFile: "\(messageManagement.defaultsPath)/\(fileName)", atomically: true, encoding: String.Encoding.utf8)
-            
-            userDefaults.set([index], forKey: "index")
-            
+            for i in 0...images.count-1 {
+                
+            let imageData = UIImageJPEGRepresentation(images[i], 1.0)
+            try! imageData?.write(to: fileURL, options: .atomic)
+                
+            }
         }
     }
     
-    public func writeObject(images:[UIImage],index:Int)
+    public func writeObject(images:[UIImage])
     {
-        saveMehod(images: images,index:index)
+        saveMehod(images: images)
     }
     
-    public func readObject(index:Int)->String
+    public func readObject()->Array<UIImage>?
     {
-        if let dir = FileManager.default.urls( for: .documentDirectory, in: .userDomainMask ).first {
+        
+        uiImage.removeAll()
+        
+        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        
+        let fileURL = URL(fileURLWithPath: filePath).appendingPathComponent(fileNamed)
+        
+        uiImage = [UIImage(contentsOfFile: fileURL.path)!]
+        
+        guard fileURL.path != "" else {
+            
+            return nil
+
+        }
+
+        ImageEntity.imageArray.append(uiImage.last!)
+            
+        return  uiImage
+
+    }
+    
+    
+    public func removeObject()
+    {
+        if let dir = FileManager.default.urls( for: .documentDirectory, in: .userDomainMask ).last {
             
             let fileName = dir.appendingPathComponent(try! fileManager.contentsOfDirectory(atPath: messageManagement.defaultsPath)[0])
             
-            do {
-        
-                let arry = try String( contentsOf: fileName, encoding: String.Encoding.utf8 )
-                let flags : Array<String> = arry.characters.split{$0 == "}"}.map(String.init)
-                
-                print(flags)
-                
-
-                return flags.description
-                
-                
-            } catch {
-                
-                //Preparation of FileManager
-            }
+            try! FileManager.default.removeItem(at: fileName)
+            
         }
-        return ""
-    }
-    
-    public func removeObject(index:Int)
-    {
-        try! fileManager.removeItem(atPath: "\(messageManagement.defaultsPath)/\(fileName)")
     }
 }
+
