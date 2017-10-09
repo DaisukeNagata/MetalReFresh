@@ -35,6 +35,16 @@ public class ObjectDefaults : NSObject {
         }
     }
     
+    public func objectIndexDefaults(index:Int)
+    {
+        userDefaults.set(index, forKey: "index")
+    }
+    
+    public func objectSetIndexDefaults()->Int
+    {
+        return ObjectDefaults().userDefaults.integer(forKey: "index")
+    }
+    
     public func setObject()->(Array<UIImage>,Int)
     {
         let userImages =   ObjectDefaults().userDefaults.object(forKey: "image")
