@@ -13,6 +13,8 @@ public class TextManager: NSObject {
     var isDir : ObjCBool = true
     let fileNamed = "saveMehod.text"
     var uiImage = Array<UIImage>()
+    var fileURL = [URL]()
+    var imageData = [Data]()
     
     public func saveMehod(images:[UIImage])
     {
@@ -20,18 +22,17 @@ public class TextManager: NSObject {
         fileManager.fileExists(atPath: messageManagement.defaultsPath, isDirectory: &isDir)
         
         if isDir.boolValue {
-            
-            try! fileManager.createDirectory(atPath: messageManagement.defaultsPath ,withIntermediateDirectories: true, attributes: nil)
-            let fileURL = URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed)
-            
-            
+
             for i in 0...images.count-1 {
+
+            try! fileManager.createDirectory(atPath: messageManagement.defaultsPath ,withIntermediateDirectories: true, attributes: nil)
+            fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))
                 
-            let imageData = UIImageJPEGRepresentation(images[i], 1.0)
-            try! imageData?.write(to: fileURL, options: .atomic)
-                
+                imageData.append(UIImagePNGRepresentation(images[i])!)
+                try! imageData[i].write(to: fileURL[i], options: .atomic)
+
             }
-        }
+       }
     }
     
     public func writeObject(images:[UIImage])
@@ -39,29 +40,27 @@ public class TextManager: NSObject {
         saveMehod(images: images)
     }
     
-    public func readObject()->Array<UIImage>?
+    public func readObject()
     {
-        
-        uiImage.removeAll()
-        
-        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        
-        let fileURL = URL(fileURLWithPath: filePath).appendingPathComponent(fileNamed)
-        
-        uiImage = [UIImage(contentsOfFile: fileURL.path)!]
-        
-        guard fileURL.path != "" else {
-            
-            return nil
 
+        for i in 0...ObjectDefaults().objectSetIndexDefaults()-1 {
+            
+        fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))
+
+        imageData.append(try! Data(contentsOf: fileURL[i],options: NSData.ReadingOptions.mappedIfSafe))
+
+        uiImage.append(UIImage(data:imageData[i])!)
+       
+        guard fileURL[i].path != "" else {
+            
+            return
+        }
+           
+        ImageEntity.imageArray.append(uiImage[i])
+        
         }
 
-        ImageEntity.imageArray.append(uiImage.last!)
-            
-        return  uiImage
-
     }
-    
     
     public func removeObject()
     {

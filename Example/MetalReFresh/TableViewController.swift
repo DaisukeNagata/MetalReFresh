@@ -19,7 +19,7 @@ class TableViewController: UITableViewController {
         
         refresh()
         swipeMethod()
-        ImageEntity.imageArray = TextManager().readObject()!
+
     }
     
     func refresh()
@@ -31,14 +31,10 @@ class TableViewController: UITableViewController {
     
     @objc func refreshSet()
     {
-        if  ImageEntity.imageArray.count == 0 {
-            
-            pull.imageCount = 0
-            
-        }
         
         guard ImageEntity.imageArray.count !=  0 else {
             
+            pull.imageCount = 0
             refreshControl?.endRefreshing()
             tableReload()
             
@@ -80,7 +76,7 @@ class TableViewController: UITableViewController {
             return 0
         }
         
-        return  1
+        return  ImageEntity.imageArray.count
         
     }
     

@@ -11,6 +11,6 @@ public struct messageManagement {
     
     static let  defaultsPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory,
                                                                    FileManager.SearchPathDomainMask.userDomainMask,
-                                                                   true).first ?? ""
+                                                                   true)[0]
     
 }
