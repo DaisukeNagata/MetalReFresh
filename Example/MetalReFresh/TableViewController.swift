@@ -102,6 +102,7 @@ class TableViewController: UITableViewController {
         
         ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         ImageEntity.imageArray.remove(at: indexPath.row)
+        TextManager().removeObject(index:indexPath.row)
         
         if ImageEntity.imageArray.count != 0 {
             
