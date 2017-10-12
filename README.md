@@ -6,6 +6,8 @@
 
 ![](https://raw.githubusercontent.com/daisukenagata/MetalReFresh/9a65daa1d865a7613ab1fbf302ee7b36e29fd86e/MetalMovie.gif)
 
+## Reference article
+http://dbank.sakura.ne.jp/Metal23.html
 
 ## Example
 To run the example project, clone the repo, and run pod install from the Example directory first.
