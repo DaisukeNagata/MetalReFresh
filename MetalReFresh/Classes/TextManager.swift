@@ -11,7 +11,7 @@ public class TextManager: NSObject {
     
     let fileManager = FileManager.default
     var isDir : ObjCBool = true
-    let fileNamed = "saveMehod.text"
+    let fileNamed = "saveMethod.text"
     var uiImage = Array<UIImage>()
     var fileURL = [URL]()
     var imageData = [Data]()
@@ -62,15 +62,11 @@ public class TextManager: NSObject {
 
     }
     
-    public func removeObject()
+    public func removeObject(index:Int)
     {
-        if let dir = FileManager.default.urls( for: .documentDirectory, in: .userDomainMask ).last {
-            
-            let fileName = dir.appendingPathComponent(try! fileManager.contentsOfDirectory(atPath: messageManagement.defaultsPath)[0])
-            
-            try! FileManager.default.removeItem(at: fileName)
-            
-        }
+        
+        try! FileManager.default.removeItem(at: URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(index)"))
+        
     }
 }
 
