@@ -157,10 +157,8 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         cameraViewRoll.frame = self.view.frame
         cameraViewRoll.image = image
         ImageEntity.imageArray.append(image)
-        
+        ObjectDefaults().objectIndexDefaults(index: ImageEntity.imageArray.count-1)
         TextManager().writeObject(images: ImageEntity.imageArray)
-        ObjectDefaults().objectIndexDefaults(index: ImageEntity.imageArray.count)
-
         
         self.view.addSubview(cameraViewRoll)
         self.dismiss(animated: true, completion: nil)
