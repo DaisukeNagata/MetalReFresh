@@ -125,6 +125,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.textLabel?.text = EncodesSample().encodeSet(images: ImageEntity.imageArray[indexPath.row], index: indexPath.row)
+        
         tableReload()
         
         pull.imageCount = indexPath.row
