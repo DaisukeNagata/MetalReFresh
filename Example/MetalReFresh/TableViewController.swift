@@ -10,8 +10,9 @@ import UIKit
 import MetalKit
 import MetalReFresh
 
-class TableViewController: UITableViewController {
-    
+
+class TableViewController: UITableViewController,UITableViewDragDelegate,UITableViewDropDelegate {
+   
     var pull = PullToObject()
     
     override func viewDidLoad() {
@@ -19,7 +20,13 @@ class TableViewController: UITableViewController {
         
         refresh()
         swipeMethod()
+        
+        self.tableView.reloadData()
 
+        self.tableView.dragDelegate = self
+        self.tableView.dropDelegate = self
+
+        navigationItem.rightBarButtonItem = editButtonItem
     }
     
     func refresh()
@@ -57,6 +64,7 @@ class TableViewController: UITableViewController {
         
         gesture.direction = directions
         self.view.addGestureRecognizer(gesture)
+
         
     }
     
@@ -146,6 +154,42 @@ class TableViewController: UITableViewController {
         
         tableView.isScrollEnabled = true
         tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+     
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .none
+    }
+    
+    override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView,dragSessionAllowsMoveOperation session: UIDragSession) -> Bool
+    {
+        return true
+    }
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator)
+    {
+        
+    }
+
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession,at indexPath: IndexPath) -> [UIDragItem]
+    {
+        return[]
+    }
+    
+    func tableView(_ tableView: UITableView,dragSessionWillBegin session: UIDragSession)
+    {
+        
+    }
+    
+    func tableView(_ tableView: UITableView,dragSessionDidEnd session: UIDragSession)
+    {
         
     }
 }
