@@ -13,8 +13,8 @@ public class TextManager: NSObject {
     var isDir : ObjCBool = true
     let fileNamed = "saveMethod.text"
     var uiImage = Array<UIImage>()
-    static var fileURL = [URL]()
-    static var imageData = [Data]()
+    var fileURL = [URL]()
+    var imageData = [Data]()
     
     public func saveMehod(images:[UIImage])
     {
@@ -24,10 +24,15 @@ public class TextManager: NSObject {
         if isDir.boolValue {
             
             try! fileManager.createDirectory(atPath: messageManagement.defaultsPath ,withIntermediateDirectories: true, attributes: nil)
-            TextManager.fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(ObjectDefaults().objectSetIndexDefaults())"))
+           
+            for i in 0...images.count-1{
+                
+            imageData.append(UIImagePNGRepresentation(images[i])!)
+            fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))
+                
+            }
 
-            TextManager.imageData.append(UIImagePNGRepresentation(images[ObjectDefaults().objectSetIndexDefaults()])!)
-            try! TextManager.imageData[ObjectDefaults().objectSetIndexDefaults()].write(to: TextManager.fileURL[ObjectDefaults().objectSetIndexDefaults()], options: .atomic)
+            try! imageData[ObjectDefaults().objectSetIndexDefaults()].write(to: fileURL[ObjectDefaults().objectSetIndexDefaults()], options: .atomic)
             
         }
     }
@@ -42,18 +47,18 @@ public class TextManager: NSObject {
         
         for i in 0...ObjectDefaults().objectSetIndexDefaults(){
             
-            TextManager.fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))
+            fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))
             
-            TextManager.imageData.append(try! Data(contentsOf: TextManager.fileURL[i],options: NSData.ReadingOptions.mappedIfSafe))
+            imageData.append(try! Data(contentsOf: fileURL[i],options: NSData.ReadingOptions.mappedIfSafe))
             
-            uiImage.append(UIImage(data:TextManager.imageData[i])!)
+            uiImage.append(UIImage(data:imageData[i])!)
             
-            guard TextManager.fileURL[i].path != "" else {
+            guard fileURL[i].path != "" else {
                 
                 return
             }
             
-            try! TextManager.imageData[i].write(to: TextManager.fileURL[i], options: .atomic)
+            try! imageData[i].write(to: fileURL[i], options: .atomic)
             ImageEntity.imageArray.append(uiImage[i])
             
         }
