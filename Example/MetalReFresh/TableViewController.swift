@@ -156,6 +156,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
         
     }
+    
     //MARK:- ios 11 tableViewMethod-------------------------------------------------------------------------------------------
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
      
@@ -173,6 +174,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     {
         return true
     }
+    
     func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator)
     {
         
