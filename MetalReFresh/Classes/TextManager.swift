@@ -16,7 +16,7 @@ public class TextManager: NSObject {
     var fileURL = [URL]()
     var imageData = [Data]()
     
-    public func saveMehod(images:[UIImage])
+    public func saveMethod(images:[UIImage])
     {
         
         fileManager.fileExists(atPath: messageManagement.defaultsPath, isDirectory: &isDir)
@@ -39,7 +39,7 @@ public class TextManager: NSObject {
     
     public func writeObject(images:[UIImage])
     {
-        saveMehod(images: images)
+        saveMethod(images: images)
     }
     
     public func readObject()
