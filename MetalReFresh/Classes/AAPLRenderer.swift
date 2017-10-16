@@ -11,7 +11,7 @@ import MetalKit
 
 var kTextureCount = 3
 
-@available(iOS 9.0, *)
+
 class AAPLRenderer:NSObject,MTKViewDelegate {
     
     var mtkView : MTKView!
