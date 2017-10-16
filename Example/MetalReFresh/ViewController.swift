@@ -118,20 +118,19 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
     }
     
     //MARK: -AVCapturePhotoOutput Method
-    internal func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?)
-    {
+    func photoOutput(_ output: AVCapturePhotoOutput,
+                     didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
-        if let photoSampleBuffer = photoSampleBuffer {
-            
-            let photoData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)
+            let photoData = photo.fileDataRepresentation()
             let photoDataImage = UIImage(data: photoData!)
             cameraView.image = photoDataImage
 
             UIImageWriteToSavedPhotosAlbum(photoDataImage!, nil, nil, nil)
             openCameraRoll()
-        }
+        
     }
     
+
     //MARK: -UIImagePickerController delegate
     func openCameraRoll()
     {
