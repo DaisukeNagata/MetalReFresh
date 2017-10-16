@@ -11,7 +11,6 @@ import UIKit
 import Foundation
 import MetalKit
 
-@available(iOS 9.0, *)
 public class PullToObject:NSObject{
     
     open var metalView: MTKView!
