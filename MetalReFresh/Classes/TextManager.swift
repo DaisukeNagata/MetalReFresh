@@ -32,7 +32,7 @@ public class TextManager: NSObject {
                 
             }
 
-            try! imageData[ObjectDefaults().objectSetIndexDefaults()].write(to: fileURL[ObjectDefaults().objectSetIndexDefaults()], options: .atomic)
+            try! imageData[ObjectDefaults().objectSetIndexDefaults()-1].write(to: fileURL[ObjectDefaults().objectSetIndexDefaults()-1], options: .atomic)
             
         }
     }
@@ -45,7 +45,7 @@ public class TextManager: NSObject {
     public func readObject()
     {
         
-        for i in 0...ObjectDefaults().objectSetIndexDefaults(){
+        for i in 0...ObjectDefaults().objectSetIndexDefaults()-1{
             
             fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))
             
