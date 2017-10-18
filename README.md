@@ -14,7 +14,7 @@ To run the example project, clone the repo, and run pod install from the Example
 
 How to
 
-Scroll UI table. Tabliset. Right Swipe Rain Shoot the camera with left and right swipe. There is a break in the up swipe photo selection table. Down swipe table transition
+Move to camera library with 2 fingers. With shooting and image selection, UI is displayed with Metal logic.
 
 
 ## Installation
