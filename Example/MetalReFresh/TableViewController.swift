@@ -60,11 +60,10 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         
         let gesture = UISwipeGestureRecognizer(target: self,
                                                action:#selector(handleSwipe(sender:)))
-        
+        gesture.numberOfTouchesRequired = 2
         gesture.direction = directions
         self.view.addGestureRecognizer(gesture)
 
-        
     }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer)
@@ -162,11 +161,6 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
      
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle
-    {
-        return .none
-    }
-    
     override func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool
     {
         return false
@@ -196,5 +190,6 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     {
         
     }
+    
 }
 
