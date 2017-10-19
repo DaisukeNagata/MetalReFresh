@@ -9,10 +9,10 @@ import Foundation
 
 public class ObjectDefaults : NSObject {
     
-    public var userDefaults = UserDefaults.standard
+    var imageData = UIImage()
     public var userArray = Array<Data>()
     public var imageUserArray :Array<UIImage> = []
-    var imageData = UIImage()
+    public var userDefaults = UserDefaults.standard
     
     public func objectDefaults(index:Int,images:[UIImage])
     {
