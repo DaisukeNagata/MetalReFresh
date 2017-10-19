@@ -16,14 +16,14 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     
     var mtkView : MTKView!
     var device : MTLDevice!
-    var commandQueue : MTLCommandQueue!
     var library : MTLLibrary!
+    var commandQueue : MTLCommandQueue!
+    var textureQueue : Array<MTLTexture?> = []
     var renderPipelineState : MTLRenderPipelineState!
     var simulationPipelineState : MTLComputePipelineState!
     var activationPipelineState : MTLComputePipelineState!
-    var samplerState : MTLSamplerState!
-    var textureQueue : Array<MTLTexture?> = []
     var currentGameStateTexture : MTLTexture!
+    var samplerState : MTLSamplerState!
     var vetexBuffer : MTLBuffer!
     var colorMap : MTLTexture!
     var gridSize : MTLSize!
