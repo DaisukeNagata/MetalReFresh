@@ -9,12 +9,13 @@ import Foundation
 
 public class TextManager: NSObject {
     
-    let fileManager = FileManager.default
-    var isDir : ObjCBool = true
-    let fileNamed = "saveMethod.text"
-    var uiImage = Array<UIImage>()
     var fileURL = [URL]()
     var imageData = [Data]()
+    var isDir : ObjCBool = true
+    var uiImage = Array<UIImage>()
+    let fileManager = FileManager.default
+    let fileNamed = "saveMethod.text"
+    
     
     public func saveMethod(images:[UIImage])
     {

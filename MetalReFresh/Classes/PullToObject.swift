@@ -13,12 +13,16 @@ import MetalKit
 
 public class PullToObject:NSObject{
     
+    open var imageCount = 0
     open var metalView: MTKView!
+    
+    var alphaView = UIView()
     var aAPLRenderer = AAPLRenderer()
+    
     var timer: Timer!
     var viewSet : UITableView!
-    var alphaView = UIView()
-    open var imageCount = 0
+    
+
     
     public func timerSet(view:UITableView?)
     {
