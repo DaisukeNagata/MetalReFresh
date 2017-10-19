@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ObjectDefaults : NSObject {
+public class ObjectDefaults : NSObject{
     
     var imageData = UIImage()
     public var userArray = Array<Data>()
