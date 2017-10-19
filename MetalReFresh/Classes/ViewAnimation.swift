@@ -12,17 +12,20 @@ import UIKit
     
     static let viewAnimation = ViewAnimation()
     
-    override init(frame:CGRect){
+    override init(frame:CGRect)
+    {
         
         super.init(frame: frame)
         
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder)
+    {
         fatalError("init(coder:) has not been implemented")
     }
     
-     func animateImage(target:UIView)->UIView{
+     func animateImage(target:UIView)->UIView
+     {
 
         target.frame = CGRect(x:UIScreen.main.bounds.size.width/2-30,y:-UIScreen.main.bounds.size.height/9,width:60,height:60)
         target.layer.cornerRadius = 20
