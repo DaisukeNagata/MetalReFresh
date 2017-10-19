@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class TextManager: NSObject {
+public class TextManager: NSObject{
     
     var fileURL = [URL]()
     var imageData = [Data]()
