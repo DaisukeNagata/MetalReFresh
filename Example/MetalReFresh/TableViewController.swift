@@ -77,11 +77,6 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         
-        if  ImageEntity.imageArray.count == 0 {
-            
-            return 0
-        }
-        
         return  ImageEntity.imageArray.count
         
     }
