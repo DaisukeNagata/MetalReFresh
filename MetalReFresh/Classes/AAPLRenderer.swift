@@ -9,8 +9,6 @@
 import UIKit
 import MetalKit
 
-var kTextureCount = 3
-
 
 class AAPLRenderer:NSObject,MTKViewDelegate {
     
@@ -29,10 +27,10 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     var gridSize : MTLSize!
     
     var activationPoints : Array<NSValue?> = []
-    var inflightSemaphore = DispatchSemaphore(value:kTextureCount)
     var nextResizeTimestamp = Date()
     var screenAnimation = Int()
     var pointSet = CGPoint()
+    var kTextureCount = 3
     var imageCount = Int()
     
     func instanceWithView(view:MTKView)
@@ -303,11 +301,14 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     
     func draw(in view: MTKView)
     {
+        
+        let inflightSemaphore = DispatchSemaphore(value:kTextureCount)
         inflightSemaphore.wait()
+        
         let commandBuffer = commandQueue.makeCommandBuffer()
         
         commandBuffer?.addCompletedHandler {  (_) in
-            self.inflightSemaphore.signal()
+            inflightSemaphore.signal()
         }
         
         encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
