@@ -13,6 +13,7 @@
 		6CC41170200274C0852E34F67236E7D4 /* Pods-MetalReFresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC609B79F1155ED3E5B05974B6572BD /* Pods-MetalReFresh_Example-dummy.m */; };
 		81D4BC5F65E71D9BB70E68689A404661 /* MetalReFresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CE187DA3DFE9AAD91B60129DBAE23 /* MetalReFresh-dummy.m */; };
 		BB3059AC1F9216760009639B /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3059AB1F9216760009639B /* Encode.swift */; };
+		BB4283981F9CA58C005350E0 /* AAPLTessellationPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4283971F9CA58C005350E0 /* AAPLTessellationPipeline.swift */; };
 		BB7D8D121F810FE1003EAF96 /* ObjectDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */; };
 		BBC90B451F7D852B0051DF7E /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */; };
 		BBC90B461F7D852B0051DF7E /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */; };
@@ -59,6 +60,7 @@
 		97A98D75BF55199964EF9D5809F60E82 /* Pods-MetalReFresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B6042D556ED221D39F06E3166185B768 /* Pods-MetalReFresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalReFresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BB3059AB1F9216760009639B /* Encode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encode.swift; sourceTree = "<group>"; };
+		BB4283971F9CA58C005350E0 /* AAPLTessellationPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLTessellationPipeline.swift; sourceTree = "<group>"; };
 		BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDefaults.swift; sourceTree = "<group>"; };
 		BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
 		BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		F916D41E16B3EDC6588C35E0AA950A83 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BB4283971F9CA58C005350E0 /* AAPLTessellationPipeline.swift */,
 				BBC90B411F7D852A0051DF7E /* AAPLRenderer.swift */,
 				BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */,
 				BBC90B441F7D852B0051DF7E /* PullToObject.swift */,
@@ -382,6 +385,7 @@
 				BBE5E0381F88F2DF00325DAD /* MessageManagement.swift in Sources */,
 				BB7D8D121F810FE1003EAF96 /* ObjectDefaults.swift in Sources */,
 				81D4BC5F65E71D9BB70E68689A404661 /* MetalReFresh-dummy.m in Sources */,
+				BB4283981F9CA58C005350E0 /* AAPLTessellationPipeline.swift in Sources */,
 				BBE5E0361F88F27A00325DAD /* TextManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

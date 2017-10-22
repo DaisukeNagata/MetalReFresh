@@ -16,8 +16,9 @@ public class PullToObject:NSObject{
     open var imageCount = 0
     open var metalView: MTKView!
     
-    var alphaView = UIView()
+    var alphaView = MTKView()
     var aAPLRenderer = AAPLRenderer()
+    var tessellationPipeline =  AAPLTessellationPipeline()
     
     var timer: Timer!
     var viewSet : UITableView!
@@ -83,6 +84,7 @@ public class PullToObject:NSObject{
             
             self.alphaView.backgroundColor = UIColor.black
             self.alphaView.alpha = 0.3
+            alphaViewSetting()
             self.viewSet.addSubview(self.alphaView)
         
             self.metalView = MTKView()
@@ -97,5 +99,18 @@ public class PullToObject:NSObject{
             self.aAPLRenderer.instanceWithView(view: ViewAnimation.viewAnimation.animateImage(target: self.metalView) as! MTKView)
             
         }
+    }
+    
+    private func alphaViewSetting()
+    {
+        alphaView.isPaused = true
+        alphaView.enableSetNeedsDisplay = true
+        alphaView.sampleCount = 4
+        
+        tessellationPipeline = tessellationPipeline.initWithMTKView(mtkView: alphaView )
+        tessellationPipeline.patchType = MTLPatchType.quad
+        tessellationPipeline.wireframe = false
+        
+        alphaView.draw()
     }
 }
