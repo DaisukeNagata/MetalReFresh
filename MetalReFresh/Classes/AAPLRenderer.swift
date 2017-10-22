@@ -27,11 +27,14 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     var gridSize : MTLSize!
     
     var activationPoints : Array<NSValue?> = []
+    
     var nextResizeTimestamp = Date()
+    
     var screenAnimation = Int()
-    var pointSet = CGPoint()
-    var kTextureCount = 3
     var imageCount = Int()
+    var kTextureCount = 3
+    
+    var pointSet = CGPoint()
     
     func instanceWithView(view:MTKView)
     {
