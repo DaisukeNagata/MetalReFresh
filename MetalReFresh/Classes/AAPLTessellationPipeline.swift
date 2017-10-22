@@ -21,6 +21,7 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
     
     var renderPipelineDescriptor = MTLRenderPipelineDescriptor()
     
+    static var count = 2.0
     var wireframe = false
     var edgeFactor:Float!
     var insideFactor:Float!
@@ -115,8 +116,16 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         renderPipelineDescriptor.tessellationOutputWindingOrder = MTLWinding.clockwise
         renderPipelineDescriptor.tessellationPartitionMode = MTLTessellationPartitionMode.fractionalEven
         
-        renderPipelineDescriptor.maxTessellationFactor = 16
-
+        renderPipelineDescriptor.maxTessellationFactor = Int(AAPLTessellationPipeline.count)
+        
+        AAPLTessellationPipeline.count += 2
+        
+        if AAPLTessellationPipeline.count == 16 {
+            
+            AAPLTessellationPipeline.count = 2
+            
+        }
+        
         // Create render pipeline for triangle-based tessellation
         renderPipelineDescriptor.vertexFunction = library.makeFunction(name: "tessellation_vertex_triangle")
         
