@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/MetalReFresh.svg?style=flat)](http://cocoapods.org/pods/MetalReFresh)
 
 
-![](https://raw.githubusercontent.com/daisukenagata/MetalReFresh/9a65daa1d865a7613ab1fbf302ee7b36e29fd86e/MetalMovie.gif)
+![](https://github.com/daisukenagata/MetalReFresh/blob/master/MovieMetal.gif?raw=true)
 
 ## Reference article
 http://dbank.sakura.ne.jp/Metal23.html
