@@ -21,8 +21,9 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
     
     var renderPipelineDescriptor = MTLRenderPipelineDescriptor()
     
-    static var count = 2.0
+    var count = 2.0
     var wireframe = false
+    
     var edgeFactor:Float!
     var insideFactor:Float!
     
@@ -31,7 +32,6 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         
         patchType = MTLPatchType.quad
         edgeFactor = 16
-        insideFactor = 16
         
         if(!self.didSetupMetal()){
             
@@ -116,13 +116,13 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         renderPipelineDescriptor.tessellationOutputWindingOrder = MTLWinding.clockwise
         renderPipelineDescriptor.tessellationPartitionMode = MTLTessellationPartitionMode.fractionalEven
         
-        renderPipelineDescriptor.maxTessellationFactor = Int(AAPLTessellationPipeline.count)
+        renderPipelineDescriptor.maxTessellationFactor = Int(count)
         
-        AAPLTessellationPipeline.count += 2
+        count += 2
         
-        if AAPLTessellationPipeline.count == 16 {
+        if count == 16 {
             
-            AAPLTessellationPipeline.count = 2
+            count = 2
             
         }
         
