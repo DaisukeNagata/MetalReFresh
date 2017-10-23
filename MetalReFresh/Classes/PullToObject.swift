@@ -108,7 +108,6 @@ public class PullToObject:NSObject{
         alphaView.sampleCount = 4
         
         tessellationPipeline = tessellationPipeline.initWithMTKView(mtkView: alphaView )
-        tessellationPipeline.patchType = MTLPatchType.quad
         tessellationPipeline.wireframe = false
         
         alphaView.draw()
