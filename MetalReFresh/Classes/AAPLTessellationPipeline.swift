@@ -126,9 +126,6 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
             
         }
         
-        // Create render pipeline for triangle-based tessellation
-        renderPipelineDescriptor.vertexFunction = library.makeFunction(name: "tessellation_vertex_triangle")
-        
         // Create render pipeline for quad-based tessellation
         renderPipelineDescriptor.vertexFunction =  library.makeFunction(name: "tessellation_vertex_quad")
         
@@ -138,9 +135,6 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
             
         }catch{}
 
-        // Create render pipeline for quad-based tessellation
-        renderPipelineDescriptor.vertexFunction =  library.makeFunction(name: "tessellation_vertex_quadSecound")
-        
         return true
     }
    
