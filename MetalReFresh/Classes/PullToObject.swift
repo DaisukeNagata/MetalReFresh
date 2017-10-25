@@ -21,9 +21,10 @@ public class PullToObject:NSObject{
     var tessellationPipeline =  AAPLTessellationPipeline()
     
     var timer: Timer!
+    var updateAnimation: Timer!
+    
     var viewSet : UITableView!
     
-
     
     public func timerSet(view:UITableView?)
     {
@@ -34,12 +35,20 @@ public class PullToObject:NSObject{
         }
         
         self.viewSet = view
+        
         timer = Timer.scheduledTimer(timeInterval: 5.0,
                                      target: self,
                                      selector: #selector(self.update),
                                      userInfo: nil, repeats: true)
         
         timer.fire()
+        
+        updateAnimation = Timer.scheduledTimer(timeInterval: 1.0,
+                                               target: self,
+                                               selector: #selector(self.updateAnimation(tm:)),
+                                               userInfo: nil, repeats: true)
+        
+        updateAnimation.fire()
     }
     
     public func invalidate()
@@ -49,7 +58,8 @@ public class PullToObject:NSObject{
         self.metalView.removeFromSuperview()
         self.metalView = nil
         timer.invalidate()
-        
+        updateAnimation.invalidate()
+            
         }
     }
     
@@ -73,6 +83,13 @@ public class PullToObject:NSObject{
         
     }
     
+    @objc private func updateAnimation(tm: Timer)
+    {
+        
+        alphaViewSetting()
+        
+    }
+    
     private func setupView()
     {
         
@@ -84,7 +101,6 @@ public class PullToObject:NSObject{
             
             self.alphaView.backgroundColor = UIColor.black
             self.alphaView.alpha = 0.3
-            alphaViewSetting()
             self.viewSet.addSubview(self.alphaView)
         
             self.metalView = MTKView()
