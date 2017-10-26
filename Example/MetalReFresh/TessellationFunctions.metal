@@ -64,26 +64,6 @@ kernel void tessellation_kernel_quad(constant float& edge_factor [[ buffer(0) ]]
 
 #pragma mark Post-Tessellation Vertex Functions
 
-// Triangle post-tessellation vertex function
-[[patch(triangle, 3)]]
-vertex FunctionOutIn tessellation_vertex_triangle(PatchIn patchIn [[stage_in]],
-                                                  float3 patch_coord [[ position_in_patch ]])
-{
-    // Barycentric coordinates
-    float u = patch_coord.x;
-    float v = patch_coord.y;
-    float w = patch_coord.z;
-    
-    // Convert to cartesian coordinates
-    float x = u * patchIn.control_points[0].position.x + v * patchIn.control_points[1].position.x + w * patchIn.control_points[2].position.x;
-    float y = u * patchIn.control_points[0].position.y + v * patchIn.control_points[1].position.y + w * patchIn.control_points[2].position.y;
-    
-    // Output
-    FunctionOutIn vertexOut;
-    vertexOut.position = float4(x, y, 0.0, 1.0);
-    vertexOut.color = half4(u, v, w, 1.0);
-    return vertexOut;
-}
 
 // Quad post-tessellation vertex function
 [[patch(quad, 4)]]
@@ -101,28 +81,11 @@ vertex FunctionOutIn tessellation_vertex_quad(PatchIn patchIn [[stage_in]],
     // Output
     FunctionOutIn vertexOut;
     vertexOut.position = float4(mix(upper_middle, lower_middle, v), 0.0, 0.8);
-    vertexOut.color = half4(u, v, 1.0-v, 1.0);
+    //ChangeColor
+    vertexOut.color = half4(u, v, 0.1-v, 0.1);
     return vertexOut;
 }
 
-// Quad post-tessellation vertex function
-[[patch(quad, 4)]]
-vertex FunctionOutIn tessellation_vertex_quadSecound(PatchIn patchIn [[stage_in]],
-                                              float2 patch_coord [[ position_in_patch ]])
-{
-    // Parameter coordinates
-    float u = patch_coord.x;
-    float v = patch_coord.y;
-    // Linear interpolation
-    float2 upper_middle = mix(patchIn.control_points[0].position.xy, patchIn.control_points[1].position.xy, u);
-    float2 lower_middle = mix(patchIn.control_points[2].position.xy, patchIn.control_points[3].position.xy, u);
-    
-    // Output
-    FunctionOutIn vertexOut;
-    vertexOut.position = float4(mix(upper_middle, lower_middle, v), 0.0, 1.0);
-    vertexOut.color = half4(u,v, lower_middle.x, 1.0);
-    return vertexOut;
-}
 
 #pragma mark Fragment Function
 
