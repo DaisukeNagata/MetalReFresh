@@ -43,7 +43,7 @@ public class PullToObject:NSObject{
         
         timer.fire()
         
-        updateAnimation = Timer.scheduledTimer(timeInterval: 0.1,
+        updateAnimation = Timer.scheduledTimer(timeInterval: 0.5,
                                                target: self,
                                                selector: #selector(self.updateAnimation(tm:)),
                                                userInfo: nil, repeats: true)
