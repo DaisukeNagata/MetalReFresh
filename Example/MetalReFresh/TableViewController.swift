@@ -101,6 +101,8 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         
+        if pull.metalView == nil {
+        
         ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         ImageEntity.imageArray.remove(at: indexPath.row)
         TextManager().removeObject(index:indexPath.row)
@@ -122,6 +124,8 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         }
         
         tableView.reloadData()
+            
+        }
         
     }
     
