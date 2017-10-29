@@ -46,6 +46,12 @@ public class TextManager: NSObject{
     public func readObject()
     {
         
+        guard ObjectDefaults().objectSetIndexDefaults() != 0 else {
+            
+            return 
+            
+        }
+        
         for i in 0...ObjectDefaults().objectSetIndexDefaults()-1{
             
             fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))

@@ -115,6 +115,8 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
             
             pull.imageCount = 0
             
+            ObjectDefaults().userDefaults.removeObject(forKey: "index")
+            
             tableReload()
             
         }
