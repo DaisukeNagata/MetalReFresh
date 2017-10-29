@@ -110,6 +110,8 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         if ImageEntity.imageArray.count != 0 {
             
             pull.imageCount = ObjectDefaults().setObject().0.count
+         
+            ObjectDefaults().objectIndexDefaults(index: ImageEntity.imageArray.count)
             
         }else{
             
