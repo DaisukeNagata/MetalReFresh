@@ -68,7 +68,7 @@ public class PullToObject:NSObject{
   
         if self.metalView == nil {
             
-            self.aAPLRenderer.screenAnimation = 11
+            ScreenAnimation.screenAnimation = 11
             self.setupView()
            
         }else{

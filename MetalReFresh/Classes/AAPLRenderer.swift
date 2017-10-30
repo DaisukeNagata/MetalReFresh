@@ -9,6 +9,10 @@
 import UIKit
 import MetalKit
 
+struct ScreenAnimation {
+    
+    static var screenAnimation = Int()
+}
 
 class AAPLRenderer:NSObject,MTKViewDelegate {
     
@@ -29,8 +33,6 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     var activationPoints : Array<NSValue?> = []
     
     var nextResizeTimestamp = Date()
-    
-    var screenAnimation = Int()
     var imageCount = Int()
     var kTextureCount = 3
     
@@ -100,7 +102,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         // Full screen animation from 88
         vetexBuffer = device.makeBuffer(bytes: vertexData,
-                                        length: MemoryLayout.size(ofValue: vertexData)*screenAnimation,
+                                        length: MemoryLayout.size(ofValue: vertexData)*ScreenAnimation.screenAnimation,
                                         options: controlPointsBufferOptions)
         
         vetexBuffer.label = "Fullscreen Quad Vertices"
