@@ -142,7 +142,7 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
     func setUpBuffers()
     {
         //validateComputeFunctionArguments length - offset must be >= 12
-        tessellationFactorsBuffer = device.makeBuffer(length: 12,
+        tessellationFactorsBuffer = device.makeBuffer(length: ScreenAnimation.screenAnimation+1,
                                                       options: MTLResourceOptions.storageModePrivate)
         
         tessellationFactorsBuffer.label = "Tessellation Factors"
@@ -161,7 +161,7 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         }()
         //Animation is set from 88.
         controlPointsBufferQuad = device.makeBuffer(bytes:controlPointPositionsQuad,
-                                                    length: MemoryLayout.size(ofValue: controlPointPositionsQuad)*11,
+                                                    length: MemoryLayout.size(ofValue: controlPointPositionsQuad)*ScreenAnimation.screenAnimation,
                                                     options: controlPointsBufferOptions)
         
         controlPointsBufferQuad.label = "Control Points Quad"
