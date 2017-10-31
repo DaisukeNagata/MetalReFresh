@@ -30,9 +30,9 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     
     func refresh()
     {
+        refreshControl?.alpha = 0
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshSet), for: UIControlEvents.valueChanged)
-        refreshControl?.alpha = 0
     }
     
     @objc func refreshSet()
@@ -40,16 +40,16 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         
         guard ImageEntity.imageArray.count !=  0 else {
             
+            tableReload()
             pull.imageCount = 0
             refreshControl?.endRefreshing()
-            tableReload()
             
             return
         }
         
         tableView.reloadData()
-        pull.timerSet(view:self.tableView)
         tableView.isScrollEnabled = false
+        pull.timerSet(view:self.tableView)
         
     }
     
@@ -59,9 +59,10 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         let directions: UISwipeGestureRecognizerDirection = .right
         
         let gesture = UISwipeGestureRecognizer(target: self,
-                                               action:#selector(handleSwipe(sender:)))
-        gesture.numberOfTouchesRequired = 2
+                                           action:#selector(handleSwipe(sender:)))
+        
         gesture.direction = directions
+        gesture.numberOfTouchesRequired = 2
         self.view.addGestureRecognizer(gesture)
 
     }
@@ -103,9 +104,9 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         
         if pull.metalView == nil {
         
-        ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
-        ImageEntity.imageArray.remove(at: indexPath.row)
         TextManager().removeObject(index:indexPath.row)
+        ImageEntity.imageArray.remove(at: indexPath.row)
+        ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         
         if ImageEntity.imageArray.count != 0 {
             
@@ -147,9 +148,9 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     {
         
         if  pull.metalView != nil {
-            
-            pull.metalView.removeFromSuperview()
+
             pull.metalView = nil
+            pull.metalView.removeFromSuperview()
             
         }
         
