@@ -138,7 +138,6 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         return true
     }
    
-    
     func setUpBuffers()
     {
         //validateComputeFunctionArguments length - offset must be >= 12

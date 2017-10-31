@@ -97,8 +97,8 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         // フラッシュとかカメラの細かな設定
         let settingsForMonitoring = AVCapturePhotoSettings()
         settingsForMonitoring.flashMode = .auto
-        settingsForMonitoring.isAutoStillImageStabilizationEnabled = true
         settingsForMonitoring.isHighResolutionPhotoEnabled = false
+        settingsForMonitoring.isAutoStillImageStabilizationEnabled = true
         self.stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
         
     }
@@ -156,9 +156,9 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         cameraViewRoll.frame = self.view.frame
         cameraViewRoll.image = image
         ImageEntity.imageArray.append(image)
-        ObjectDefaults().objectIndexDefaults(index: ImageEntity.imageArray.count)
         TextManager().writeObject(images: ImageEntity.imageArray)
-        
+        ObjectDefaults().objectIndexDefaults(index: ImageEntity.imageArray.count)
+
         self.view.addSubview(cameraViewRoll)
         self.dismiss(animated: true, completion: nil)
         
