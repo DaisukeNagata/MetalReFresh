@@ -22,6 +22,8 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
     var renderPipelineDescriptor = MTLRenderPipelineDescriptor()
     
     var count = 2.0
+    var maxCount : Float = 16.0
+    
     var wireframe = false
     
     var edgeFactor:Float!
@@ -31,7 +33,7 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
     {
         
         patchType = MTLPatchType.quad
-        edgeFactor = 16
+        edgeFactor = maxCount
         
         if(!self.didSetupMetal()){
             
@@ -100,7 +102,7 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         vertexDescriptor.attributes[0].bufferIndex = 0
         vertexDescriptor.layouts[0].stepFunction = MTLVertexStepFunction.perPatchControlPoint
         vertexDescriptor.layouts[0].stepRate = 1
-        vertexDescriptor.layouts[0].stride = 16
+        vertexDescriptor.layouts[0].stride = Int(maxCount)
         
         // Create a reusable render pipeline descriptor
         renderPipelineDescriptor.vertexDescriptor = vertexDescriptor
@@ -120,7 +122,7 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         
         count += 2
         
-        if count == 16 {
+        if count == Double(maxCount) {
             
             count = 2
             
