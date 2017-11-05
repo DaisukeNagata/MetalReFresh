@@ -153,9 +153,18 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
             pull.metalView.removeFromSuperview()
             
         }
-        
+
         tableView.isScrollEnabled = true
-        tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
+        //In case of iphone X
+        if (Double(UIDevice.current.systemVersion))! > 11.0 {
+            
+            tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-40)
+            
+        }else{
+            
+            tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
+            
+        }
         
     }
     
