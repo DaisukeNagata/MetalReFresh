@@ -155,6 +155,14 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         }
 
         tableView.isScrollEnabled = true
+        
+        guard (Double(UIDevice.current.systemVersion)) != nil else {
+            
+            tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
+            return
+            
+        }
+        
         //In case of iphone X
         if (Double(UIDevice.current.systemVersion))! > 11.0 {
             
