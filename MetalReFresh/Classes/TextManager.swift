@@ -33,7 +33,7 @@ public class TextManager: NSObject{
                 
             }
 
-            try! imageData[ObjectDefaults().objectSetIndexDefaults()-1].write(to: fileURL[ObjectDefaults().objectSetIndexDefaults()-1], options: .atomic)
+            try! imageData[ObjectDefaults().objectSetIndexDefaults()].write(to: fileURL[ObjectDefaults().objectSetIndexDefaults()], options: .atomic)
             
         }
     }
