@@ -104,9 +104,9 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         
         if pull.metalView == nil {
         
+        ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         TextManager().removeObject(index:indexPath.row)
         ImageEntity.imageArray.remove(at: indexPath.row)
-        ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
         
         if ImageEntity.imageArray.count != 0 {
             
