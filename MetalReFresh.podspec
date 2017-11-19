@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MetalReFresh'
-  s.version          = '0.4.1'
+  s.version          = '0.5'
   s.summary          = 'A new function was added.'
 
 # This description is used to generate tags and improve search results.
