@@ -13,6 +13,7 @@ import MetalReFresh
 class TableViewController: UITableViewController,UITableViewDragDelegate,UITableViewDropDelegate {
    
     var pull = PullToObject()
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,15 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         self.tableView.dropDelegate = self
 
         navigationItem.rightBarButtonItem = editButtonItem
+        
     }
     
+    @objc private func update(tm: Timer)
+    {
+        timer.invalidate()
+        offSetSize()
+    }
+  
     func refresh()
     {
         refreshControl?.alpha = 0
@@ -51,6 +59,10 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         tableView.isScrollEnabled = false
         pull.timerSet(view:self.tableView)
         
+        timer = Timer.scheduledTimer(timeInterval: 5.0,
+                                     target: self,
+                                     selector: #selector(self.update),
+                                     userInfo: nil, repeats: true)
     }
     
     private func swipeMethod()
@@ -94,7 +106,6 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         }
         
         cell.textLabel?.text = ImageEntity.imageArray[indexPath.row].description
-        
         return cell
         
     }
@@ -148,12 +159,16 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     {
         
         if  pull.metalView != nil {
-
+            
             pull.metalView = nil
             pull.metalView.removeFromSuperview()
             
         }
-
+        offSetSize()
+    }
+    
+    private func offSetSize()
+    {
         tableView.isScrollEnabled = true
         
         guard (Double(UIDevice.current.systemVersion)) != nil else {
