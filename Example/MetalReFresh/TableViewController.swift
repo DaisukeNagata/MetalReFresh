@@ -170,25 +170,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     private func offSetSize()
     {
         tableView.isScrollEnabled = true
-        
-        guard (Double(UIDevice.current.systemVersion)) != nil else {
-            
-            tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
-            return
-            
-        }
-        
-        //In case of iphone X
-        if (Double(UIDevice.current.systemVersion))! > 11.0 {
-            
-            tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-40)
-            
-        }else{
-            
-            tableView.contentOffset = CGPoint(x:0, y:-Int((self.navigationController?.navigationBar.frame.size.height)!)-20)
-            
-        }
-        
+        tableView.contentOffset = CGPoint(x:0, y:-Int(self.tableView.contentInset.top+UIApplication.shared.statusBarFrame.size.height))
     }
     
     //MARK:- ios 11 tableViewMethod-------------------------------------------------------------------------------------------
