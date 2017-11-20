@@ -164,7 +164,9 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
             pull.metalView.removeFromSuperview()
             
         }
-        offSetSize()
+        
+        tableView.contentOffset = CGPoint(x:0, y:-Int(self.tableView.contentInset.top+UIApplication.shared.statusBarFrame.size.height+44))
+
     }
     
     private func offSetSize()
