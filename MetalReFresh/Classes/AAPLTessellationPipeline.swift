@@ -20,8 +20,9 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
     var computePipelineQuad : MTLComputePipelineState!
     
     var renderPipelineDescriptor = MTLRenderPipelineDescriptor()
-        var metalDesin : Float = 0.1
+    
     var count = 2.0
+    var metalDesign : Float = 0.1
     var maxCount : Float = 16.0
     
     var wireframe = false
@@ -121,14 +122,18 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         renderPipelineDescriptor.maxTessellationFactor = Int(count)
         
         count += 2
-        metalDesin += 0.1
+        metalDesign += 0.1
+        
         if count == Double(maxCount) {
             
             count = 2
             
         }
-        if metalDesin > 5 {
-            metalDesin = 0.1
+        
+        if metalDesign > 5 {
+            
+            metalDesign = 0.1
+            
         }
         
         // Create render pipeline for quad-based tessellation
@@ -156,10 +161,10 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         let controlPointPositionsQuad  : Array<Float>  =  {
             
             [
-               -metalDesin,  0.8, 0.0, 1.0,   // upper-left
-                metalDesin,  0.8, 0.0, 1.0,   // upper-right
-                metalDesin, -0.8, 0.0, 1.0,   // lower-right
-               -metalDesin, -0.8, 0.0, 1.0,   // lower-left
+               -metalDesign,  0.8, 0.0, 1.0,   // upper-left
+                metalDesign,  0.8, 0.0, 1.0,   // upper-right
+                metalDesign, -0.8, 0.0, 1.0,   // lower-right
+               -metalDesign, -0.8, 0.0, 1.0,   // lower-left
             ]
             
         }()
