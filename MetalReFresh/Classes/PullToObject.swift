@@ -23,10 +23,10 @@ public class PullToObject:NSObject{
     var timer: Timer!
     var updateAnimation: Timer!
     
-    var viewSet : UITableView!
+    var viewSet : UIView!
     
     
-    public func timerSet(view:UITableView?)
+    public func timerSet(view:UIView?)
     {
         guard view != nil else {
             
@@ -90,33 +90,45 @@ public class PullToObject:NSObject{
         
     }
     
+    private func setDesign()
+    {
+        self.alphaView.frame = CGRect(x:0,y:-UIScreen.main.bounds.size.height/4,
+                                      width:UIScreen.main.bounds.size.width,
+                                      height:UIScreen.main.bounds.size.height)
+        
+        self.alphaView.backgroundColor = UIColor.black
+        self.alphaView.alpha = 0.3
+        self.viewSet.addSubview(self.alphaView)
+        
+        self.metalView = MTKView()
+        self.viewSet.addSubview(metalView)
+        self.metalView.device = MTLCreateSystemDefaultDevice()
+        self.metalView.colorPixelFormat = MTLPixelFormat.bgra8Unorm
+        self.metalView.clearColor =  MTLClearColorMake(0, 0, 0, 1)
+        self.metalView.isUserInteractionEnabled = true
+        self.metalView.frame = self.viewSet.frame
+        
+        self.aAPLRenderer.imageCount = imageCount
+    }
+    
     private func setupView()
     {
         
         if self.metalView == nil {
             
-            self.alphaView.frame = CGRect(x:0,y:-UIScreen.main.bounds.size.height/4,
-                                          width:UIScreen.main.bounds.size.width,
-                                          height:UIScreen.main.bounds.size.height)
-            
-            self.alphaView.backgroundColor = UIColor.black
-            self.alphaView.alpha = 0.3
-            self.viewSet.addSubview(self.alphaView)
-        
-            self.metalView = MTKView()
-            self.viewSet.addSubview(metalView)
-            self.metalView.device = MTLCreateSystemDefaultDevice()
-            self.metalView.colorPixelFormat = MTLPixelFormat.bgra8Unorm
-            self.metalView.clearColor =  MTLClearColorMake(0, 0, 0, 1)
-            self.metalView.isUserInteractionEnabled = true
-            self.metalView.frame = self.viewSet.frame
-            
-            self.aAPLRenderer.imageCount = imageCount
+            setDesign()
             self.aAPLRenderer.instanceWithView(view: ViewAnimation.viewAnimation.animateImage(target: self.metalView) as! MTKView)
             
         }
     }
     
+    public func metalPosition(point:CGPoint,view:UIView)
+    {
+        ScreenAnimation.screenAnimation = 11
+        self.viewSet = view
+         setDesign()
+        self.aAPLRenderer.instanceWithView(view: ViewAnimation.viewAnimation.animateSet(target: self.metalView,point: point) as! MTKView)
+    }
     private func alphaViewSetting()
     {
         alphaView.isPaused = true
