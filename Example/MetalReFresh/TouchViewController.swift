@@ -26,26 +26,5 @@ class TouchViewController: UIViewController {
         // タップした座標を取得する
         pull.metalPosition(point: touches.first!.location(in: self.view), view: self.view)
     }
-    
-    private func swipeMethod()
-    {
-        
-        let directions: UISwipeGestureRecognizerDirection = .right
-        
-        let gesture = UISwipeGestureRecognizer(target: self,
-                                               action:#selector(handleSwipe(sender:)))
-        
-        gesture.direction = directions
-        gesture.numberOfTouchesRequired = 2
-        self.view.addGestureRecognizer(gesture)
-        
-    }
-    
-    @objc func handleSwipe(sender: UISwipeGestureRecognizer)
-    {
-        
-        let vc = ViewController()
-        self.present(vc, animated: true)
-        
-    }
+
 }
