@@ -14,6 +14,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B84DD82E825467C3F41125F6 /* Pods_MetalReFresh_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D056723B5D1E0BE12287D7 /* Pods_MetalReFresh_Example.framework */; };
 		BB42839C1F9CA6F2005350E0 /* TessellationFunctions.metal in Sources */ = {isa = PBXBuildFile; fileRef = BB42839B1F9CA6F2005350E0 /* TessellationFunctions.metal */; };
+		BB5275C01FCE63F6009B16DA /* TouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5275BF1FCE63F6009B16DA /* TouchViewController.swift */; };
 		BBC90B4C1F7D85520051DF7E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B4B1F7D85520051DF7E /* TableViewController.swift */; };
 		BBC90B521F7D864B0051DF7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC90B511F7D864B0051DF7E /* Main.storyboard */; };
 		BBE5E03A1F8907DF00325DAD /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BBE5E0391F8907DF00325DAD /* Shaders.metal */; };
@@ -46,6 +47,7 @@
 		A6BFAE15E3B04109204701A0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B59A075E200BF7F92DD508B2 /* Pods-MetalReFresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalReFresh_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetalReFresh_Tests/Pods-MetalReFresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB42839B1F9CA6F2005350E0 /* TessellationFunctions.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TessellationFunctions.metal; sourceTree = "<group>"; };
+		BB5275BF1FCE63F6009B16DA /* TouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchViewController.swift; sourceTree = "<group>"; };
 		BBC90B4B1F7D85520051DF7E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BBC90B511F7D864B0051DF7E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BBE5E0391F8907DF00325DAD /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				BBC90B4B1F7D85520051DF7E /* TableViewController.swift */,
 				BBC90B511F7D864B0051DF7E /* Main.storyboard */,
+				BB5275BF1FCE63F6009B16DA /* TouchViewController.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				BBE5E0391F8907DF00325DAD /* Shaders.metal */,
 				BB42839B1F9CA6F2005350E0 /* TessellationFunctions.metal */,
@@ -370,6 +373,7 @@
 			files = (
 				BBE5E03A1F8907DF00325DAD /* Shaders.metal in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				BB5275C01FCE63F6009B16DA /* TouchViewController.swift in Sources */,
 				BB42839C1F9CA6F2005350E0 /* TessellationFunctions.metal in Sources */,
 				BBC90B4C1F7D85520051DF7E /* TableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
