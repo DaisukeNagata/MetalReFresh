@@ -15,7 +15,8 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     var pull = PullToObject()
     var timer: Timer!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         refresh()
@@ -114,24 +115,22 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     {
         
         if pull.metalView == nil {
-        
-        ObjectDefaults().objectDefaults(index: indexPath.row, images: [ImageEntity.imageArray[indexPath.row]])
+            
+        ObjectDefaults().objectIndexDefaults(index: indexPath.row)
         TextManager().removeObject(index:indexPath.row)
         ImageEntity.imageArray.remove(at: indexPath.row)
         
         if ImageEntity.imageArray.count != 0 {
             
-            pull.imageCount = ObjectDefaults().setObject().0.count
-         
+            pull.imageCount = ImageEntity.imageArray.count
             ObjectDefaults().objectIndexDefaults(index: ImageEntity.imageArray.count)
             
         }else{
             
             pull.invalidate()
+            pull.imageCount = ImageEntity.imageArray.count
             
-            pull.imageCount = 0
-            
-            ObjectDefaults().userDefaults.removeObject(forKey: "index")
+            ObjectDefaults().objectIndexDefaults(index: ImageEntity.imageArray.count)
             
             tableReload()
             
@@ -150,7 +149,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         cell?.textLabel?.text = EncodesSample().encodeSet(images: ImageEntity.imageArray[indexPath.row], index: indexPath.row)
         
         tableReload()
-        
+        TouchViewController.intCount = indexPath.row
         pull.imageCount = indexPath.row
         
     }
