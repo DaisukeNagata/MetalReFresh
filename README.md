@@ -7,6 +7,8 @@
 ![](https://github.com/daisukenagata/MetalReFresh/blob/master/MetalReFresh.gif?raw=true)
 
 ## Reference article
+https://t.co/QL9JyXSD2L
+
 http://dbank.sakura.ne.jp/Metal23.html
 
 ## Example
