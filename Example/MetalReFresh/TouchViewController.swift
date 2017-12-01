@@ -17,7 +17,6 @@ class TouchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        swipeMethod()
         
     }
 
