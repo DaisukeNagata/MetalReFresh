@@ -21,9 +21,10 @@ class TouchViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       pull.imageCount = TouchViewController.intCount
-        // タップした座標を取得する
+       
+        pull.imageCount = TouchViewController.intCount
         pull.metalPosition(point: touches.first!.location(in: self.view), view: self.view)
+        
     }
 
 }
