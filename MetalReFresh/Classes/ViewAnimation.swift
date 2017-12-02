@@ -33,7 +33,7 @@ import UIKit
     
     func animateSet(target:UIView,point:CGPoint)->UIView
     {
-        target.frame = CGRect(x:point.x,y:point.y,width:60,height:60)
+        target.frame = CGRect(x:point.x,y:point.y,width:180,height:180)
         desginModel(target: target)
         return target
     }
@@ -46,7 +46,7 @@ import UIKit
         let angle:CGFloat = CGFloat(Double.pi)
         
         UIView.animate(
-            withDuration: 1.0,
+            withDuration: 5.0,
             animations: {() -> Void  in
                 
                 target.transform = CGAffineTransform(rotationAngle: angle)
