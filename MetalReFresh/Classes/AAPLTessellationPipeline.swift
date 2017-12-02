@@ -161,10 +161,11 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         let controlPointPositionsQuad  : Array<Float>  =  {
             
             [
-               -metalDesign,  0.8, 0.0, 1.0,   // upper-left
-                metalDesign,  0.8, 0.0, 1.0,   // upper-right
-                metalDesign, -0.8, 0.0, 1.0,   // lower-right
-               -metalDesign, -0.8, 0.0, 1.0,   // lower-left
+               -metalDesign,  metalDesign, 0.0, 1.0,   // upper-left
+                metalDesign,  metalDesign, 0.0, 1.0,   // upper-right
+                metalDesign, -metalDesign, 0.0, 1.0,   // lower-right
+               -metalDesign, -metalDesign, 0.0, 1.0,   // lower-left
+                
             ]
             
         }()
