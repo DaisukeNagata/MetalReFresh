@@ -57,6 +57,9 @@ public class PullToObject:NSObject{
             
         self.metalView.removeFromSuperview()
         self.metalView = nil
+        
+        self.alphaView.removeFromSuperview()
+            
         timer.invalidate()
         updateAnimation.invalidate()
             
@@ -77,6 +80,7 @@ public class PullToObject:NSObject{
             self.metalView = nil
             
             timer.invalidate()
+            updateAnimation.invalidate()
             alphaView.alpha = 0
             
         }
@@ -139,5 +143,6 @@ public class PullToObject:NSObject{
         tessellationPipeline.wireframe = false
         
         alphaView.draw()
+       
     }
 }
