@@ -9,18 +9,16 @@ import Foundation
 
 public class EncodesSample: NSObject{
     
-    let data = Data()
     open var imageData = Array<String>()
     
     public func encodeSet(images:UIImage?,index:Int) -> String
     {
-        let str = images?.description
-        let data : Data = (str?.data(using: .utf8))!
-        let encode = data.base64EncodedString(options: [])
-        
+   
+        let dataSet = images?.description.data(using: String.Encoding.utf8)
+        let base64Str = dataSet?.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
         for _ in 0...index{
             
-            imageData.append(encode)
+            imageData.append(base64Str!)
         }
         
         return imageData[index].description

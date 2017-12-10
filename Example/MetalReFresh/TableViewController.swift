@@ -146,7 +146,17 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     {
         
         let cell = tableView.cellForRow(at: indexPath)
-        cell?.textLabel?.text = EncodesSample().encodeSet(images: ImageEntity.imageArray[indexPath.row], index: indexPath.row)
+
+        //Encode or Decode
+        if (cell?.textLabel?.text?.lengthOfBytes(using: String.Encoding.shiftJIS))! < 47 {
+            
+            cell?.textLabel?.text = EncodesSample().encodeSet(images: ImageEntity.imageArray[indexPath.row], index: indexPath.row)
+          
+        }else{
+            
+            cell?.textLabel?.text = DecodesSample().Decode(st:(cell?.textLabel?.text!)!,index: indexPath.row)
+            
+        }
         
         tableReload()
         TouchViewController.intCount = indexPath.row
