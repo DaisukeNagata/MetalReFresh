@@ -9,7 +9,7 @@ import Foundation
 
 public class DecodesSample: NSObject{
     
-    open var imageDataDecode = Array<String>()
+    open var imageData = Array<String>()
     
     public func Decode(images:UIImage?,index:Int) -> String
     {
