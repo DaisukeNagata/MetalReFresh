@@ -11,9 +11,9 @@ public class DecodesSample: NSObject{
     
     open var imageData = Array<String>()
     
-    public func Decode(images:UIImage?,index:Int) -> String
+    public func Decode(st:String?,index:Int) -> String
     {
-        let decodedData = Data(base64Encoded: (images?.description)!,
+        let decodedData = Data(base64Encoded: st!,
                                  options: Data.Base64DecodingOptions.ignoreUnknownCharacters)
 
         let decodedString = String(data: decodedData!, encoding: String.Encoding.utf8)
