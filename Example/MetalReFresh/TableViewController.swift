@@ -148,7 +148,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         let cell = tableView.cellForRow(at: indexPath)
 
         //Encode or Decode
-        if (cell?.textLabel?.text?.lengthOfBytes(using: String.Encoding.shiftJIS))! < 47 {
+        if (cell?.textLabel?.text?.lengthOfBytes(using: String.Encoding.shiftJIS))! < 47 || (cell?.textLabel?.text?.lengthOfBytes(using: String.Encoding.shiftJIS))! == 69{
             
             cell?.textLabel?.text = EncodesSample().encodeSet(images: ImageEntity.imageArray[indexPath.row], index: indexPath.row)
           
