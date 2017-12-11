@@ -15,6 +15,8 @@ public class DecodesSample: NSObject{
     {
         let decodedData = Data(base64Encoded: st!,
                                  options: Data.Base64DecodingOptions.ignoreUnknownCharacters)
+        
+        guard decodedData != nil else{ return st! }
 
         let decodedString = String(data: decodedData!, encoding: String.Encoding.utf8)
         
