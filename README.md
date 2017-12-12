@@ -19,6 +19,8 @@ How to
 Move to camera library with 2 fingers. With shooting and image selection, UI is displayed with Metal logic.
 
 
+If you press the itemButton on the top left, you will select Metallogic in the image.
+
 ## Installation
 
 MetalReFresh is available through [CocoaPods](http://cocoapods.org). To install
