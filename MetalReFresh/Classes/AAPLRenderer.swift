@@ -288,6 +288,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.endEncoding()
             
             commandBuffer.present(mtkView.currentDrawable!)
+            mtkView.releaseDrawables()
         }
         
     }
@@ -320,6 +321,8 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
         
         commandBuffer?.commit()
+        mtkView.releaseDrawables()
+        
         
     }
 }

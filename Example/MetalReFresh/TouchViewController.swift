@@ -13,6 +13,8 @@ class TouchViewController: UIViewController {
 
     static var intCount = Int()
     var pull = PullToObject()
+    var timer: Timer!
+    var toucheSet : Set<UITouch>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +22,43 @@ class TouchViewController: UIViewController {
         
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
        
-        pull.imageCount = TouchViewController.intCount
-        pull.metalPosition(point: touches.first!.location(in: self.view), view: self.view)
+        swipeMethod()
+        toucheSet = touches
         
     }
 
+    @objc private func update(tm: Timer)
+    {
+        timer.invalidate()
+        pull.imageCount = TouchViewController.intCount
+        pull.metalPosition(point: toucheSet.first!.location(in: self.view), view: self.view)
+    
+    }
+    
+    private func swipeMethod()
+    {
+        
+        let directions: UISwipeGestureRecognizerDirection = .up
+        
+        let gesture = UISwipeGestureRecognizer(target: self,
+                                               action:#selector(handleSwipe(sender:)))
+        
+        gesture.direction = directions
+        gesture.numberOfTouchesRequired = 1
+        self.view.addGestureRecognizer(gesture)
+        
+    }
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer)
+    {
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(self.update),
+                                     userInfo: nil, repeats: true)
+        
+    }
 }
