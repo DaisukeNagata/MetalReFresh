@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/MetalReFresh.svg?style=flat)](http://cocoapods.org/pods/MetalReFresh)
 
 
-![](https://github.com/daisukenagata/MetalReFresh/blob/master/MetaReFresh.gif?raw=true)
+![](https://github.com/daisukenagata/MetalReFresh/blob/master/MetalReFresh.gif?raw=true)
 
 ## Reference article
 https://t.co/QL9JyXSD2L
