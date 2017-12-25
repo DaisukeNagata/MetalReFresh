@@ -52,6 +52,7 @@ import UIKit
                 target.transform = CGAffineTransform(rotationAngle: angle)
                 target.transform = CGAffineTransform.identity
                 
+                target.layer.cornerRadius = -target.frame.width * 2
         },
             completion: { (Bool) -> Void in
                 
