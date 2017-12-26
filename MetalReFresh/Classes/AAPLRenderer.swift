@@ -35,8 +35,8 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     var nextResizeTimestamp = Date()
     var imageCount = Int()
     var kTextureCount = 3
-    
     var pointSet = CGPoint()
+    var boolFlag = false
     
     func instanceWithView(view:MTKView)
     {
@@ -287,8 +287,18 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             
             renderEncoder?.endEncoding()
             
-            commandBuffer.present(mtkView.currentDrawable!)
-            mtkView.releaseDrawables()
+            if boolFlag == true {
+                
+                commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
+                boolFlag = false
+                mtkView.releaseDrawables()
+                
+            }else{
+
+                commandBuffer.present(mtkView.currentDrawable!)
+                boolFlag = true
+                
+            }
         }
         
     }
@@ -321,7 +331,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
         
         commandBuffer?.commit()
-        mtkView.releaseDrawables()
+
         
         
     }
