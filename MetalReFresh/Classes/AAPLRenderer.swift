@@ -34,7 +34,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     
     var nextResizeTimestamp = Date()
     var imageCount = Int()
-    var kTextureCount = 3
+    var kTextureCount = 1
     var pointSet = CGPoint()
     var boolFlag = false
     
@@ -121,7 +121,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         vertexDescriptor.attributes[1].offset = 2*MemoryLayout.size(ofValue: Float())
         vertexDescriptor.attributes[1].bufferIndex = 0
         vertexDescriptor.attributes[1].format = MTLVertexFormat.float2
-        vertexDescriptor.layouts[0].stride =  4*MemoryLayout.size(ofValue:  Float())
+        vertexDescriptor.layouts[0].stride = 64*MemoryLayout.size(ofValue:  Float())
         vertexDescriptor.layouts[0].stepRate = 1
         vertexDescriptor.layouts[0].stepFunction = MTLVertexStepFunction.perVertex
         
@@ -287,6 +287,8 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             
             renderEncoder?.endEncoding()
         
+            //ww->currentDrawable
+            commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
             commandBuffer.present(mtkView.currentDrawable!)
             
         }
@@ -308,7 +310,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     func draw(in view: MTKView)
     {
         
-        let inflightSemaphore = DispatchSemaphore(value:kTextureCount)
+        let inflightSemaphore = DispatchSemaphore(value:1)
         inflightSemaphore.wait()
         Thread.sleep(forTimeInterval: 0.1)
 
