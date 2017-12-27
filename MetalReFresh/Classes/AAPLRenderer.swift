@@ -286,19 +286,9 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
             
             renderEncoder?.endEncoding()
+        
+            commandBuffer.present(mtkView.currentDrawable!)
             
-            if boolFlag == true {
-                
-                commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
-                boolFlag = false
-                mtkView.releaseDrawables()
-                
-            }else{
-
-                commandBuffer.present(mtkView.currentDrawable!)
-                boolFlag = true
-                
-            }
         }
         
     }
@@ -320,20 +310,18 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         let inflightSemaphore = DispatchSemaphore(value:kTextureCount)
         inflightSemaphore.wait()
-        
+        Thread.sleep(forTimeInterval: 0.1)
+
         let commandBuffer = commandQueue.makeCommandBuffer()
-        
+     
+
         commandBuffer?.addCompletedHandler {  (_) in
             inflightSemaphore.signal()
         }
         
-        encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
-        encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
-        
-        commandBuffer?.commit()
-
-        
-        
+        self.encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
+        self.encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
+         commandBuffer?.commit()
     }
 }
 
