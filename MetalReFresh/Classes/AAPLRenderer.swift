@@ -288,21 +288,23 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.endEncoding()
         
             //ww->currentDrawable
+            if boolFlag == false {
+                
             commandBuffer.present(mtkView.currentDrawable!)
+            mtkView.releaseDrawables()
+                
+            }else{
+                
+            commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
+            mtkView.releaseDrawables()
+            }
         }
         
     }
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize)
     {
-        let resizeHysteresis : TimeInterval = 0.200
-        nextResizeTimestamp = Date.init(timeIntervalSinceNow: resizeHysteresis)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + resizeHysteresis) {
-            if self.nextResizeTimestamp.timeIntervalSinceNow <= 0 {
-                self.reshapeWithDrawableSize(drawableSize: self.mtkView.drawableSize)
-            }
-        }
+        self.reshapeWithDrawableSize(drawableSize: self.mtkView.drawableSize)
     }
     
     func draw(in view: MTKView)
