@@ -288,8 +288,17 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.endEncoding()
         
             //ww->currentDrawable
-            commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
-            commandBuffer.present(mtkView.currentDrawable!)
+            if boolFlag == true {
+                
+                commandBuffer.present((mtkView.currentDrawable?.layer.nextDrawable())!)
+                boolFlag = false
+                
+            }else{
+                
+                commandBuffer.present(mtkView.currentDrawable!)
+                boolFlag = true
+                
+            }
             
         }
         
