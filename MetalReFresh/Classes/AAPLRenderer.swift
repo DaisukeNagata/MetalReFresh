@@ -123,7 +123,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         vertexDescriptor.attributes[1].offset = 2*MemoryLayout.size(ofValue: Float())
         vertexDescriptor.attributes[1].bufferIndex = 0
         vertexDescriptor.attributes[1].format = MTLVertexFormat.float2
-        vertexDescriptor.layouts[0].stride = 64*MemoryLayout.size(ofValue:  Float())
+        vertexDescriptor.layouts[0].stride = 8*MemoryLayout.size(ofValue:  Float())
         vertexDescriptor.layouts[0].stepRate = 1
         vertexDescriptor.layouts[0].stepFunction = MTLVertexStepFunction.perVertex
         
@@ -240,7 +240,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         if activationPoints.count > 0 && Int(pointSet.x) != 0 {
             
-            let byteCount = activationPoints.count * 2000 * MemoryLayout.size(ofValue: 1)
+            let byteCount = activationPoints.count * 1 * MemoryLayout.size(ofValue: 1)
             var cellPositions  = [(byteCount,byteCount)]
             
             for (_, byteCount) in activationPoints.enumerated() {
