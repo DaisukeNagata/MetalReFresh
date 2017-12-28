@@ -288,7 +288,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
             
             renderEncoder?.endEncoding()
-            
+
             caLayer = mtkView.layer as! CAMetalLayer
             commandBuffer.present(caLayer.nextDrawable()!)
             mtkView.releaseDrawables()

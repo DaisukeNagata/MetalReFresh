@@ -33,7 +33,7 @@ import UIKit
     
     func animateSet(target:UIView,point:CGPoint)->UIView
     {
-        target.frame = CGRect(x:point.x,y:point.y,width:180,height:180)
+        target.frame = CGRect(x:point.x,y:point.y,width:60,height:60)
         desginModel(target: target)
         return target
     }
