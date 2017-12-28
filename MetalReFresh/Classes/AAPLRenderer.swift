@@ -29,16 +29,12 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     var vetexBuffer : MTLBuffer!
     var colorMap : MTLTexture!
     var gridSize : MTLSize!
-    
-    var caLayer = CAMetalLayer()
-    
+
     var activationPoints : Array<NSValue?> = []
-    
     var nextResizeTimestamp = Date()
     var imageCount = Int()
     var kTextureCount = 3
     var pointSet = CGPoint()
-    var boolFlag = false
     
     func instanceWithView(view:MTKView)
     {
@@ -234,7 +230,6 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         commandEncoder?.setComputePipelineState(simulationPipelineState)
         commandEncoder?.setTexture(readTexture!, index: 0)
         commandEncoder?.setTexture(writeTexture!, index: 1)
-        
         commandEncoder?.setSamplerState(samplerState, index: 0)
         commandEncoder?.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
         
@@ -258,7 +253,6 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             commandEncoder?.setComputePipelineState(activationPipelineState)
             commandEncoder?.setTexture(writeTexture!, index: 0)
             commandEncoder?.setBytes(cellPositions, length: byteCount, index: 0)
-            
             commandEncoder?.dispatchThreadgroups(threadgroupCount, threadsPerThreadgroup: threadsPerThreadgroup)
             
             activationPoints.removeAll()
@@ -284,13 +278,10 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.setVertexBuffer(vetexBuffer, offset: 0, index: 0)
             renderEncoder?.setFragmentTexture(currentGameStateTexture, index: 0)
             renderEncoder?.setFragmentTexture(colorMap, index: 1)
-            
             renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
-            
             renderEncoder?.endEncoding()
 
-            caLayer = mtkView.layer as! CAMetalLayer
-            commandBuffer.present(caLayer.nextDrawable()!)
+            commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
             mtkView.releaseDrawables()
          
         }
@@ -312,9 +303,11 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         let commandBuffer = commandQueue.makeCommandBuffer()
      
         inflightSemaphore.signal()
+        
         self.encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
         self.encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
-         commandBuffer?.commit()
+        
+        commandBuffer?.commit()
     }
 }
 
