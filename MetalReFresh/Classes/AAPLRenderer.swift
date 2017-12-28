@@ -30,6 +30,8 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     var colorMap : MTLTexture!
     var gridSize : MTLSize!
     
+    var caLayer = CAMetalLayer()
+    
     var activationPoints : Array<NSValue?> = []
     
     var nextResizeTimestamp = Date()
@@ -286,9 +288,9 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
             
             renderEncoder?.endEncoding()
-        
-            //ww->currentDrawable
-            commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
+            
+            caLayer = mtkView.layer as! CAMetalLayer
+            commandBuffer.present(caLayer.nextDrawable()!)
             mtkView.releaseDrawables()
          
         }
