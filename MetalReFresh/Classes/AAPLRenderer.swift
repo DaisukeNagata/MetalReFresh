@@ -34,7 +34,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     
     var nextResizeTimestamp = Date()
     var imageCount = Int()
-    var kTextureCount = 1
+    var kTextureCount = 3
     var pointSet = CGPoint()
     var boolFlag = false
     
@@ -220,8 +220,8 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     func encodeComputeWorkInBuffer(commandBuffer:MTLCommandBuffer)
     {
         
-        let readTexture = textureQueue.last
-        let writeTexture = textureQueue.first
+        let readTexture = textureQueue.first
+        let writeTexture = textureQueue.last
         
         let commandEncoder = commandBuffer.makeComputeCommandEncoder()
         
@@ -238,7 +238,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
         if activationPoints.count > 0 && Int(pointSet.x) != 0 {
             
-            let byteCount = activationPoints.count * 2 * MemoryLayout.size(ofValue: 1)
+            let byteCount = activationPoints.count * 2000 * MemoryLayout.size(ofValue: 1)
             var cellPositions  = [(byteCount,byteCount)]
             
             for (_, byteCount) in activationPoints.enumerated() {
@@ -289,6 +289,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         
             //ww->currentDrawable
             commandBuffer.present(mtkView.currentDrawable!.layer.nextDrawable()!)
+            mtkView.releaseDrawables()
          
         }
         
@@ -308,11 +309,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
 
         let commandBuffer = commandQueue.makeCommandBuffer()
      
-
-        commandBuffer?.addCompletedHandler {  (_) in
-            inflightSemaphore.signal()
-        }
-        
+        inflightSemaphore.signal()
         self.encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
         self.encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
          commandBuffer?.commit()

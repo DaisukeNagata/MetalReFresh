@@ -145,19 +145,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
-        let cell = tableView.cellForRow(at: indexPath)
-
-        //Encode or Decode
-        if (cell?.textLabel?.text?.lengthOfBytes(using: String.Encoding.shiftJIS))! < 47 || (cell?.textLabel?.text?.lengthOfBytes(using: String.Encoding.shiftJIS))! == 69{
-            
-            cell?.textLabel?.text = EncodesSample().encodeSet(images: ImageEntity.imageArray[indexPath.row], index: indexPath.row)
-          
-        }else{
-            
-            cell?.textLabel?.text = DecodesSample().Decode(st:(cell?.textLabel?.text!)!,index: indexPath.row)
-            
-        }
-        
+       
         tableReload()
         TouchViewController.intCount = indexPath.row
         pull.imageCount = indexPath.row
