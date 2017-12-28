@@ -55,7 +55,7 @@ class TouchViewController: UIViewController {
     @objc func handleSwipe(sender: UISwipeGestureRecognizer)
     {
         
-        timer = Timer.scheduledTimer(timeInterval: 3.0,
+        timer = Timer.scheduledTimer(timeInterval: 5.0,
                                      target: self,
                                      selector: #selector(self.update),
                                      userInfo: nil, repeats: true)
