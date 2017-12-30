@@ -47,7 +47,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
         library = device.makeDefaultLibrary()
         commandQueue = device.makeCommandQueue()
         
-        textureQueue.reserveCapacity(kTextureCount)
+        textureQueue.reserveCapacity(1)
         
         buildRenderResources()
         buildRenderPipeline()
@@ -189,7 +189,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
                                                                   mipmapped: false)
         descriptor.usage = [.shaderRead,.shaderWrite]
         
-        for _ in 0...kTextureCount-1{
+        for _ in 0...2{
             let texture = device.makeTexture(descriptor: descriptor)
             texture?.label = "Game State"
             textureQueue.append(texture)
