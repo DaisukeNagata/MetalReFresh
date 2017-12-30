@@ -33,7 +33,6 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     var activationPoints : Array<NSValue?> = []
     var nextResizeTimestamp = Date()
     var imageCount = Int()
-    var kTextureCount = 3
     var pointSet = CGPoint()
     
     func instanceWithView(view:MTKView)
@@ -295,9 +294,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
     
     func draw(in view: MTKView)
     {
-        
-        let inflightSemaphore = DispatchSemaphore(value:kTextureCount)
-        inflightSemaphore.wait()
+
         Thread.sleep(forTimeInterval: 0.1)
 
         let commandBuffer = commandQueue.makeCommandBuffer()
