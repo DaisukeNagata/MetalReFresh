@@ -299,8 +299,6 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
 
         let commandBuffer = commandQueue.makeCommandBuffer()
      
-        inflightSemaphore.signal()
-        
         self.encodeComputeWorkInBuffer(commandBuffer: commandBuffer!)
         self.encodeRenderWorkInBuffer(commandBuffer: commandBuffer!)
         
