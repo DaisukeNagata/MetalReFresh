@@ -7,10 +7,7 @@
 
 import Foundation
 
-public struct messageManagement{
-    
-    static let  defaultsPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory,
+public struct messageManagement{ static let  defaultsPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory,
                                                                    FileManager.SearchPathDomainMask.userDomainMask,
                                                                    true)[0]
-    
 }

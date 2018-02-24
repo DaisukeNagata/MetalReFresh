@@ -9,42 +9,32 @@
 import UIKit
 
  class ViewAnimation: UIView {
-    
+
     static let viewAnimation = ViewAnimation()
     
-    override init(frame:CGRect)
-    {
-        
-        super.init(frame: frame)
-        
-    }
+    override init(frame: CGRect) { super.init(frame: frame) }
     
-    required public init?(coder aDecoder: NSCoder)
-    {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-     func animateImage(target:UIView)->UIView
-     {
+     func animateImage(target: UIView)-> UIView {
         target.frame = CGRect(x:UIScreen.main.bounds.size.width/2-30,y:-UIScreen.main.bounds.size.height/9,width:60,height:60)
         desginModel(target: target)
         return target
     }
-    
-    func animateSet(target:UIView,point:CGPoint)->UIView
-    {
+
+    func animateSet(target: UIView, point: CGPoint)-> UIView {
         target.frame = CGRect(x:point.x,y:point.y,width:60,height:60)
         desginModel(target: target)
         return target
     }
-    
-    func desginModel(target:UIView)
-    {
+
+    func desginModel(target: UIView) {
         target.layer.cornerRadius = 20
         target.layer.masksToBounds = true
         
-        let angle:CGFloat = CGFloat(Double.pi)
-        
+        let angle: CGFloat = CGFloat(Double.pi)
         UIView.animate(
             withDuration: 5.0,
             animations: {() -> Void  in
@@ -59,4 +49,5 @@ import UIKit
                 _ = self.animateImage(target: target)
         })
     }
+
 }
