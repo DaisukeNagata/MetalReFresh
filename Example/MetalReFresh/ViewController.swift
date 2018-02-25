@@ -12,7 +12,7 @@ import AVFoundation
 import AssetsLibrary
 import Photos
 
-class ViewController: UIViewController, AVCapturePhotoCaptureDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class ViewController: UIViewController, AVCapturePhotoCaptureDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     private var cameraView = UIImageView()
     private var cameraViewRoll = UIImageView()
@@ -93,7 +93,7 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate, UIImagePi
         self.stillImageOutput?.capturePhoto(with: settingsForMonitoring, delegate: self)
     }
     
-    @objc func handleUpSwipe(sender: UISwipeGestureRecognizer) { openCameraRoll()}
+    @objc func handleUpSwipe(sender: UISwipeGestureRecognizer) { openCameraRoll() }
 
     @objc func handleDownSwipe(sender: UISwipeGestureRecognizer) { self.dismiss(animated: true, completion: nil) }
 
