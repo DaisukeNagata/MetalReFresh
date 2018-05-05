@@ -258,11 +258,7 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
             renderEncoder?.endEncoding()
 
-            if #available(iOS 10.3, *) {
-                commandBuffer.present((mtkView.currentDrawable?.layer.nextDrawable())!)
-            } else {
-                // Fallback on earlier versions
-            }
+            commandBuffer.present((mtkView.currentDrawable?.layer.nextDrawable())!)
             mtkView.releaseDrawables()
         }
         
