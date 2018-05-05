@@ -9,7 +9,8 @@ import Foundation
 import MetalKit
 
 class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
-    
+
+
     var device : MTLDevice!
     var library : MTLLibrary!
     var patchType : MTLPatchType!
@@ -30,7 +31,7 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
         patchType = MTLPatchType.quad
         edgeFactor = maxCount
         
-        if(!self.didSetupMetal()){ eturn self }
+        if(!self.didSetupMetal()){ return self }
         // Assign device and delegate to MTKView
         mtkView.device = device
         mtkView.delegate = self
@@ -63,8 +64,8 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
 
             computePipelineQuad = try device.makeComputePipelineState(function: kernelFunctionQuad!)
 
-        } catch
-
+        } catch {
+        }
         return true
 
     }
@@ -206,5 +207,4 @@ class AAPLTessellationPipeline :NSObject,MTKViewDelegate{
             commandBuffer?.commit()
         }
     }
-
 }
