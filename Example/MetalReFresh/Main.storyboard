@@ -79,7 +79,7 @@
         <!--View Controller-->
         <scene sceneID="fum-6u-NOb">
             <objects>
-                <viewController id="DPz-6h-P8b" customClass="ViewController" customModule="MetalReFresh_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DPz-6h-P8b" customClass="ViewController" customModule="MetalReFresh_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kc3-NA-mhU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ffw-GS-TRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="-81"/>
+            <point key="canvasLocation" x="66" y="-195"/>
         </scene>
     </scenes>
 </document>
