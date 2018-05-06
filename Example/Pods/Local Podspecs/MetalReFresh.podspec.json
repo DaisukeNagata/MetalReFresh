@@ -1,9 +1,9 @@
 {
   "name": "MetalReFresh",
-  "version": "0.7.1",
-  "summary": "A short description of MetalReFresh.",
+  "version": "0.7.2",
+  "summary": "A new function",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/daisuke nagata/MetalReFresh",
+  "homepage": "https://github.com/daisukenagata/MetalReFresh",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,14 @@
     "daisuke nagata": "dbank0208@gmail.com"
   },
   "source": {
-    "git": "https://github.com/daisuke nagata/MetalReFresh.git",
-    "tag": "0.7.1"
+    "git": "https://github.com/daisukenagata/MetalReFresh.git",
+    "tag": "0.7.2"
   },
   "platforms": {
     "ios": "11.3"
+  },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "4.1"
   },
   "source_files": "MetalReFresh/Classes/**/*"
 }

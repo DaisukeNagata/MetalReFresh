@@ -1,5 +1,5 @@
 PODS:
-  - MetalReFresh (0.1.0)
+  - MetalReFresh (0.7.2)
 
 DEPENDENCIES:
   - MetalReFresh (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MetalReFresh: 5fc71a1590f6363c6a8cc5bdb6a48c9d7d7c794f
+  MetalReFresh: daa3840d427c16ccb2bd0cdb9b860cb77f5da401
 
-PODFILE CHECKSUM: 81855c038026cb5710e8cc1ec098b4359b882d33
+PODFILE CHECKSUM: 5b88e0d6e3f003bd032331bf0af7a6cd9a6ef20d
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.0

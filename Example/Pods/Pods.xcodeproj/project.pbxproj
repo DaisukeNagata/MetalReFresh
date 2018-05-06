@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FE062D71649EEFEF3B74C12A4886618 /* MetalReFresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5037D796A1A5CACAE6DFC674A10C2BB /* MetalReFresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D84AAC80E2C049EA0E94351C9172B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5C3FD11327D214FFAD523A85FBA37BA7 /* PullToObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3CCFBDDE58FC7F2D24ACCEF248EF50 /* PullToObject.swift */; };
+		5C7C29189760312FE6BA716854579F96 /* MetalReFresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A66788B3A1E359C1B6D1F7215774BF04 /* MetalReFresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6220D924F90A35A73544264B9AC76F17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		6CC41170200274C0852E34F67236E7D4 /* Pods-MetalReFresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC609B79F1155ED3E5B05974B6572BD /* Pods-MetalReFresh_Example-dummy.m */; };
-		81D4BC5F65E71D9BB70E68689A404661 /* MetalReFresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 865CE187DA3DFE9AAD91B60129DBAE23 /* MetalReFresh-dummy.m */; };
-		BB4283981F9CA58C005350E0 /* AAPLTessellationPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4283971F9CA58C005350E0 /* AAPLTessellationPipeline.swift */; };
-		BB7D8D121F810FE1003EAF96 /* ObjectDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */; };
-		BBC90B451F7D852B0051DF7E /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */; };
-		BBC90B461F7D852B0051DF7E /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */; };
-		BBC90B471F7D852B0051DF7E /* AAPLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B411F7D852A0051DF7E /* AAPLRenderer.swift */; };
-		BBC90B4A1F7D852B0051DF7E /* PullToObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC90B441F7D852B0051DF7E /* PullToObject.swift */; };
-		BBE5E0361F88F27A00325DAD /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5E0351F88F27A00325DAD /* TextManager.swift */; };
-		BBE5E0381F88F2DF00325DAD /* MessageManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5E0371F88F2DF00325DAD /* MessageManagement.swift */; };
-		C65318756A918FA0EA0AF4875503F771 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CFF7770547777DDA89AF0159C9C29ABE /* Pods-MetalReFresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41DE89294A902FDB02110EE5F3E3432F /* Pods-MetalReFresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E05BB4BDCE08F487D6F3D564352F7468 /* Pods-MetalReFresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E186665D574C44A1E45E70A42A7B018 /* Pods-MetalReFresh_Tests-dummy.m */; };
-		E517E9E5F4B2430F501D5D2C7D4CA2CF /* Pods-MetalReFresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DFFF11B5BF10D800E36D697A3BC3CE3 /* Pods-MetalReFresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		683572840A877E1E81A8596A2BCBB621 /* ObjectDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AA413BFABFFCFF7F4864AC1ED6079 /* ObjectDefaults.swift */; };
+		6CB55758495216B0FBA292BAF1DCD838 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6CC41170200274C0852E34F67236E7D4 /* Pods-MetalReFresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFE4C8AED7601CC84A363DC9FB9BED3 /* Pods-MetalReFresh_Example-dummy.m */; };
+		9B1A6F0E8CAA0A0449F47BAD0E9D945C /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8124F6850A9237688E2DDD577F995 /* ViewAnimation.swift */; };
+		9D948249C045E68623721956EC1636D3 /* MetalReFresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04640E4387BF864E3160CA74BCB31F3D /* MetalReFresh-dummy.m */; };
+		9F3EB4611E181BAB2E9CF8A39D8A1595 /* Pods-MetalReFresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3101E357101AB079596492CC9C91BBAD /* Pods-MetalReFresh_Tests-dummy.m */; };
+		A32FD7FCD027DCF0FAEBCAF8A8A8691C /* MessageManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75618F9508A76A4EA6235EBF0B240265 /* MessageManagement.swift */; };
+		A3880DE4707275F106F4B901E1BC8C6C /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E5629AA102BC72FE8820B43360566 /* ImageEntity.swift */; };
+		AE850B037F953BDB11FAA8EA22F26FA8 /* AAPLTessellationPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FCB039D00A1BA7DB9003FECFD963F /* AAPLTessellationPipeline.swift */; };
+		AFB398F0CA877EF3805209AE06B8DE20 /* Pods-MetalReFresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 178235974F83C9F421F0F6335A190620 /* Pods-MetalReFresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFF7770547777DDA89AF0159C9C29ABE /* Pods-MetalReFresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C497F9CE6B4DA022DE2EE624A6C0644 /* Pods-MetalReFresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA8467386EFCB6B950B3524F936B25E9 /* AAPLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3723E2E542D147AE35A6DB4ED38521E4 /* AAPLRenderer.swift */; };
+		E694B3FB7B1E812FA3891A9D56796BCE /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB2C9D636BB9A6D899E4EA6738B4C86 /* TextManager.swift */; };
+		F60FC618CEF27BF31525AFFB9F6FD5B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,67 +31,69 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E9C6577A71692F7B030DBBFBBF32DA64;
+			remoteGlobalIDString = 68D6017611854BE02FD02921DDD4562E;
 			remoteInfo = MetalReFresh;
+		};
+		933227922F6DCBBC9D6DAACCB97B63E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39D4009E676063E0BA8A4B89D649394A;
+			remoteInfo = "Pods-MetalReFresh_Example";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A111E9EF1AE34BA16C65952CBA69C06 /* Pods_MetalReFresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetalReFresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B4232D5A9FF357F45E87A76396AED63 /* MetalReFresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MetalReFresh.xcconfig; sourceTree = "<group>"; };
-		1BE3B33BDCD931C1DB14E8A2C03C63CC /* Pods-MetalReFresh_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		34CABC0242D76956F13C8D379F530C9D /* MetalReFresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MetalReFresh.modulemap; sourceTree = "<group>"; };
-		35FB5E1F6B826C1AD5D670CA8FC7012D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A68F0D60690127018D6C0E20BF0A0B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41DE89294A902FDB02110EE5F3E3432F /* Pods-MetalReFresh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MetalReFresh_Example-umbrella.h"; sourceTree = "<group>"; };
-		4C2E8B8A1DBDB6E5655CF6B554E6E2CD /* Pods-MetalReFresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4E186665D574C44A1E45E70A42A7B018 /* Pods-MetalReFresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MetalReFresh_Tests-dummy.m"; sourceTree = "<group>"; };
-		4ED45B7E5D3E04EAC82B874CA8CCD5CA /* Pods-MetalReFresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		588CF1B96B45269093A5F77C9660B75E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04640E4387BF864E3160CA74BCB31F3D /* MetalReFresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MetalReFresh-dummy.m"; sourceTree = "<group>"; };
+		0A111E9EF1AE34BA16C65952CBA69C06 /* Pods_MetalReFresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MetalReFresh_Example.framework; path = "Pods-MetalReFresh_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		178235974F83C9F421F0F6335A190620 /* Pods-MetalReFresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MetalReFresh_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3101E357101AB079596492CC9C91BBAD /* Pods-MetalReFresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MetalReFresh_Tests-dummy.m"; sourceTree = "<group>"; };
+		34500EAEB0425EAA737E646C6F37C80D /* Pods-MetalReFresh_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Tests-resources.sh"; sourceTree = "<group>"; };
+		3723E2E542D147AE35A6DB4ED38521E4 /* AAPLRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAPLRenderer.swift; path = MetalReFresh/Classes/AAPLRenderer.swift; sourceTree = "<group>"; };
+		372FCB039D00A1BA7DB9003FECFD963F /* AAPLTessellationPipeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAPLTessellationPipeline.swift; path = MetalReFresh/Classes/AAPLTessellationPipeline.swift; sourceTree = "<group>"; };
+		3BD5E183BB50CA545668F3CB1EA9E804 /* MetalReFresh.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = MetalReFresh.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4FCA2FB28D503C1EBDA20FF29127A0B4 /* Pods-MetalReFresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MetalReFresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5FB0141ED6DF11302933A20CBD64DA1F /* Pods-MetalReFresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalReFresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		662E75759F72345E5726E9A389913B88 /* Pods-MetalReFresh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MetalReFresh_Tests.modulemap"; sourceTree = "<group>"; };
-		6EDD67CC2611A967C9223FA25C7F21D8 /* Pods_MetalReFresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetalReFresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		865CE187DA3DFE9AAD91B60129DBAE23 /* MetalReFresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MetalReFresh-dummy.m"; sourceTree = "<group>"; };
-		8DFFF11B5BF10D800E36D697A3BC3CE3 /* Pods-MetalReFresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MetalReFresh_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9003D776CD332DFB027BBF9EC148C774 /* Pods-MetalReFresh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MetalReFresh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9787B35EE7FD6B3264F2453C4E074FBD /* Pods-MetalReFresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MetalReFresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		97A98D75BF55199964EF9D5809F60E82 /* Pods-MetalReFresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B6042D556ED221D39F06E3166185B768 /* Pods-MetalReFresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalReFresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BB4283971F9CA58C005350E0 /* AAPLTessellationPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLTessellationPipeline.swift; sourceTree = "<group>"; };
-		BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDefaults.swift; sourceTree = "<group>"; };
-		BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
-		BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
-		BBC90B411F7D852A0051DF7E /* AAPLRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAPLRenderer.swift; sourceTree = "<group>"; };
-		BBC90B441F7D852B0051DF7E /* PullToObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToObject.swift; sourceTree = "<group>"; };
-		BBE5E0351F88F27A00325DAD /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
-		BBE5E0371F88F2DF00325DAD /* MessageManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManagement.swift; sourceTree = "<group>"; };
-		BEB31E312F642BFEDF4DC14E244A0FF9 /* MetalReFresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetalReFresh-prefix.pch"; sourceTree = "<group>"; };
-		CB2BCA7B410FF87151CD4A3030A4A61A /* MetalReFresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetalReFresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC7454ED7A8B6EF1BDB6CAEDA56400FE /* Pods-MetalReFresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MetalReFresh_Example.modulemap"; sourceTree = "<group>"; };
-		D85D28465038F63B58CC8ECF2B508608 /* Pods-MetalReFresh_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Tests-resources.sh"; sourceTree = "<group>"; };
-		DFC609B79F1155ED3E5B05974B6572BD /* Pods-MetalReFresh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MetalReFresh_Example-dummy.m"; sourceTree = "<group>"; };
-		E5037D796A1A5CACAE6DFC674A10C2BB /* MetalReFresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetalReFresh-umbrella.h"; sourceTree = "<group>"; };
-		E7A26ACC6D185873DB51704914BBC8AC /* Pods-MetalReFresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F2800A17F3E06F1691706D9E51849F1C /* Pods-MetalReFresh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Example-frameworks.sh"; sourceTree = "<group>"; };
-		F6257958DC351D4A3791B4ACD7CA91A2 /* Pods-MetalReFresh_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalReFresh_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FF660DA43B3E16CDF8BE790FBFEFFF52 /* Pods-MetalReFresh_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Example-resources.sh"; sourceTree = "<group>"; };
+		6632D1E3718B0D05A128258649402175 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B9B11AAFF11E145E6F9CCFBC67B2D2 /* MetalReFresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetalReFresh-prefix.pch"; sourceTree = "<group>"; };
+		6E5ABCE43E15E84F9B0699F6B254A98E /* Pods-MetalReFresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EDD67CC2611A967C9223FA25C7F21D8 /* Pods_MetalReFresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MetalReFresh_Tests.framework; path = "Pods-MetalReFresh_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B19EA35827E1A6D8B84328B6D121F4 /* Pods-MetalReFresh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MetalReFresh_Tests.modulemap"; sourceTree = "<group>"; };
+		7467F36FF90A4F3D2E2C79ADB8C12748 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		75618F9508A76A4EA6235EBF0B240265 /* MessageManagement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageManagement.swift; path = MetalReFresh/Classes/MessageManagement.swift; sourceTree = "<group>"; };
+		797BDE872D20DD41E49ACC5F799ADC0D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7B6AA413BFABFFCFF7F4864AC1ED6079 /* ObjectDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectDefaults.swift; path = MetalReFresh/Classes/ObjectDefaults.swift; sourceTree = "<group>"; };
+		80EA972B174A0C69848C0F4360A111BB /* Pods-MetalReFresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Example.release.xcconfig"; sourceTree = "<group>"; };
+		877F71D45681D94218C4BCD6A167AD15 /* Pods-MetalReFresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8C497F9CE6B4DA022DE2EE624A6C0644 /* Pods-MetalReFresh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MetalReFresh_Example-umbrella.h"; sourceTree = "<group>"; };
+		8CB2C9D636BB9A6D899E4EA6738B4C86 /* TextManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextManager.swift; path = MetalReFresh/Classes/TextManager.swift; sourceTree = "<group>"; };
+		8DFE4C8AED7601CC84A363DC9FB9BED3 /* Pods-MetalReFresh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MetalReFresh_Example-dummy.m"; sourceTree = "<group>"; };
+		8E186586B878E883BB5E2C1F4B04F7AD /* Pods-MetalReFresh_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96A8124F6850A9237688E2DDD577F995 /* ViewAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimation.swift; path = MetalReFresh/Classes/ViewAnimation.swift; sourceTree = "<group>"; };
+		A66788B3A1E359C1B6D1F7215774BF04 /* MetalReFresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetalReFresh-umbrella.h"; sourceTree = "<group>"; };
+		B027AAB35870383D3414B1D09702C4A7 /* Pods-MetalReFresh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MetalReFresh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B735E175182901685ABA3456E3F14E6F /* Pods-MetalReFresh_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Example-resources.sh"; sourceTree = "<group>"; };
+		C2C615FA341342CAC5C0F51622CA65E3 /* Pods-MetalReFresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MetalReFresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CB2BCA7B410FF87151CD4A3030A4A61A /* MetalReFresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MetalReFresh.framework; path = MetalReFresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28809D6CBFE4093BF4554082E38A640 /* Pods-MetalReFresh_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MetalReFresh_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D36E5629AA102BC72FE8820B43360566 /* ImageEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageEntity.swift; path = MetalReFresh/Classes/ImageEntity.swift; sourceTree = "<group>"; };
+		DA11E84E8096915AA87DDC97C844F5DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3CCFBDDE58FC7F2D24ACCEF248EF50 /* PullToObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PullToObject.swift; path = MetalReFresh/Classes/PullToObject.swift; sourceTree = "<group>"; };
+		E37CE590F250918B674D03E1D5EE7E86 /* MetalReFresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MetalReFresh.modulemap; sourceTree = "<group>"; };
+		EA9D8C190C0A1541D7211A861545BDFC /* Pods-MetalReFresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MetalReFresh_Example.modulemap"; sourceTree = "<group>"; };
+		F078637A3376E625249AF2D5B1252262 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5E5F55D1DE397C50D9739A692F0BE6F /* Pods-MetalReFresh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MetalReFresh_Example-frameworks.sh"; sourceTree = "<group>"; };
+		FC1C509035EA282DF05D96C3201CB38E /* MetalReFresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MetalReFresh.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		435A97241D2139204498C5200437E19C /* Frameworks */ = {
+		1A04A552A5C966CEC0D0775394D6B42C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D84AAC80E2C049EA0E94351C9172B6D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A13C9EE6EB6ABBFFA0A4A964C6912827 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C65318756A918FA0EA0AF4875503F771 /* Foundation.framework in Frameworks */,
+				6CB55758495216B0FBA292BAF1DCD838 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,54 +105,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3E14433823A1E1BD26A374361C1B8E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60FC618CEF27BF31525AFFB9F6FD5B8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24B126E838130FBFCAAA55FCE45FA6D7 /* Pods-MetalReFresh_Tests */ = {
+		045206057D71B361B0CC5B1E11850763 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				35FB5E1F6B826C1AD5D670CA8FC7012D /* Info.plist */,
-				662E75759F72345E5726E9A389913B88 /* Pods-MetalReFresh_Tests.modulemap */,
-				B6042D556ED221D39F06E3166185B768 /* Pods-MetalReFresh_Tests-acknowledgements.markdown */,
-				9787B35EE7FD6B3264F2453C4E074FBD /* Pods-MetalReFresh_Tests-acknowledgements.plist */,
-				4E186665D574C44A1E45E70A42A7B018 /* Pods-MetalReFresh_Tests-dummy.m */,
-				1BE3B33BDCD931C1DB14E8A2C03C63CC /* Pods-MetalReFresh_Tests-frameworks.sh */,
-				D85D28465038F63B58CC8ECF2B508608 /* Pods-MetalReFresh_Tests-resources.sh */,
-				8DFFF11B5BF10D800E36D697A3BC3CE3 /* Pods-MetalReFresh_Tests-umbrella.h */,
-				4ED45B7E5D3E04EAC82B874CA8CCD5CA /* Pods-MetalReFresh_Tests.debug.xcconfig */,
-				4C2E8B8A1DBDB6E5655CF6B554E6E2CD /* Pods-MetalReFresh_Tests.release.xcconfig */,
+				ACFD2CF4E313ED9B40BD42F736007797 /* MetalReFresh */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		39B3BC140A473D6CCDB8D50AF57077FE /* Pods-MetalReFresh_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DA11E84E8096915AA87DDC97C844F5DF /* Info.plist */,
+				72B19EA35827E1A6D8B84328B6D121F4 /* Pods-MetalReFresh_Tests.modulemap */,
+				5FB0141ED6DF11302933A20CBD64DA1F /* Pods-MetalReFresh_Tests-acknowledgements.markdown */,
+				4FCA2FB28D503C1EBDA20FF29127A0B4 /* Pods-MetalReFresh_Tests-acknowledgements.plist */,
+				3101E357101AB079596492CC9C91BBAD /* Pods-MetalReFresh_Tests-dummy.m */,
+				8E186586B878E883BB5E2C1F4B04F7AD /* Pods-MetalReFresh_Tests-frameworks.sh */,
+				34500EAEB0425EAA737E646C6F37C80D /* Pods-MetalReFresh_Tests-resources.sh */,
+				178235974F83C9F421F0F6335A190620 /* Pods-MetalReFresh_Tests-umbrella.h */,
+				6E5ABCE43E15E84F9B0699F6B254A98E /* Pods-MetalReFresh_Tests.debug.xcconfig */,
+				C2C615FA341342CAC5C0F51622CA65E3 /* Pods-MetalReFresh_Tests.release.xcconfig */,
 			);
 			name = "Pods-MetalReFresh_Tests";
 			path = "Target Support Files/Pods-MetalReFresh_Tests";
 			sourceTree = "<group>";
 		};
-		58743B3C1BAF458ACF6A156F99EC6A0F /* Pods-MetalReFresh_Example */ = {
+		4EAF154EEE6836A046156D3754325154 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				588CF1B96B45269093A5F77C9660B75E /* Info.plist */,
-				CC7454ED7A8B6EF1BDB6CAEDA56400FE /* Pods-MetalReFresh_Example.modulemap */,
-				F6257958DC351D4A3791B4ACD7CA91A2 /* Pods-MetalReFresh_Example-acknowledgements.markdown */,
-				9003D776CD332DFB027BBF9EC148C774 /* Pods-MetalReFresh_Example-acknowledgements.plist */,
-				DFC609B79F1155ED3E5B05974B6572BD /* Pods-MetalReFresh_Example-dummy.m */,
-				F2800A17F3E06F1691706D9E51849F1C /* Pods-MetalReFresh_Example-frameworks.sh */,
-				FF660DA43B3E16CDF8BE790FBFEFFF52 /* Pods-MetalReFresh_Example-resources.sh */,
-				41DE89294A902FDB02110EE5F3E3432F /* Pods-MetalReFresh_Example-umbrella.h */,
-				E7A26ACC6D185873DB51704914BBC8AC /* Pods-MetalReFresh_Example.debug.xcconfig */,
-				97A98D75BF55199964EF9D5809F60E82 /* Pods-MetalReFresh_Example.release.xcconfig */,
+				797BDE872D20DD41E49ACC5F799ADC0D /* LICENSE */,
+				3BD5E183BB50CA545668F3CB1EA9E804 /* MetalReFresh.podspec */,
+				7467F36FF90A4F3D2E2C79ADB8C12748 /* README.md */,
 			);
-			name = "Pods-MetalReFresh_Example";
-			path = "Target Support Files/Pods-MetalReFresh_Example";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		73BE9A994B426078564377DF09509252 /* Support Files */ = {
+		5B392F0404E5D7AE0409C41CD01C9C22 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A68F0D60690127018D6C0E20BF0A0B4 /* Info.plist */,
-				34CABC0242D76956F13C8D379F530C9D /* MetalReFresh.modulemap */,
-				0B4232D5A9FF357F45E87A76396AED63 /* MetalReFresh.xcconfig */,
-				865CE187DA3DFE9AAD91B60129DBAE23 /* MetalReFresh-dummy.m */,
-				BEB31E312F642BFEDF4DC14E244A0FF9 /* MetalReFresh-prefix.pch */,
-				E5037D796A1A5CACAE6DFC674A10C2BB /* MetalReFresh-umbrella.h */,
+				6632D1E3718B0D05A128258649402175 /* Info.plist */,
+				E37CE590F250918B674D03E1D5EE7E86 /* MetalReFresh.modulemap */,
+				FC1C509035EA282DF05D96C3201CB38E /* MetalReFresh.xcconfig */,
+				04640E4387BF864E3160CA74BCB31F3D /* MetalReFresh-dummy.m */,
+				66B9B11AAFF11E145E6F9CCFBC67B2D2 /* MetalReFresh-prefix.pch */,
+				A66788B3A1E359C1B6D1F7215774BF04 /* MetalReFresh-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/MetalReFresh";
@@ -160,19 +170,11 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				AC222CE1303F836B7C8ED06BC62512B3 /* Development Pods */,
+				045206057D71B361B0CC5B1E11850763 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				A4E2CB640D303772B23EC28A7B28F5C8 /* Products */,
 				DC1EC37952D44CC24250593350E8CEA5 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9050A2AC9609781E6D187A558A19E2CA /* MetalReFresh */ = {
-			isa = PBXGroup;
-			children = (
-				F916D41E16B3EDC6588C35E0AA950A83 /* Classes */,
-			);
-			path = MetalReFresh;
 			sourceTree = "<group>";
 		};
 		A4E2CB640D303772B23EC28A7B28F5C8 /* Products */ = {
@@ -185,12 +187,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC222CE1303F836B7C8ED06BC62512B3 /* Development Pods */ = {
+		ACFD2CF4E313ED9B40BD42F736007797 /* MetalReFresh */ = {
 			isa = PBXGroup;
 			children = (
-				F3AF317F258EA513A68F01D8E3A3146E /* MetalReFresh */,
+				3723E2E542D147AE35A6DB4ED38521E4 /* AAPLRenderer.swift */,
+				372FCB039D00A1BA7DB9003FECFD963F /* AAPLTessellationPipeline.swift */,
+				D36E5629AA102BC72FE8820B43360566 /* ImageEntity.swift */,
+				75618F9508A76A4EA6235EBF0B240265 /* MessageManagement.swift */,
+				7B6AA413BFABFFCFF7F4864AC1ED6079 /* ObjectDefaults.swift */,
+				DE3CCFBDDE58FC7F2D24ACCEF248EF50 /* PullToObject.swift */,
+				8CB2C9D636BB9A6D899E4EA6738B4C86 /* TextManager.swift */,
+				96A8124F6850A9237688E2DDD577F995 /* ViewAnimation.swift */,
+				4EAF154EEE6836A046156D3754325154 /* Pod */,
+				5B392F0404E5D7AE0409C41CD01C9C22 /* Support Files */,
 			);
-			name = "Development Pods";
+			name = MetalReFresh;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B41D177C04A757D04F3528C49AC54E63 /* Pods-MetalReFresh_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F078637A3376E625249AF2D5B1252262 /* Info.plist */,
+				EA9D8C190C0A1541D7211A861545BDFC /* Pods-MetalReFresh_Example.modulemap */,
+				D28809D6CBFE4093BF4554082E38A640 /* Pods-MetalReFresh_Example-acknowledgements.markdown */,
+				B027AAB35870383D3414B1D09702C4A7 /* Pods-MetalReFresh_Example-acknowledgements.plist */,
+				8DFE4C8AED7601CC84A363DC9FB9BED3 /* Pods-MetalReFresh_Example-dummy.m */,
+				F5E5F55D1DE397C50D9739A692F0BE6F /* Pods-MetalReFresh_Example-frameworks.sh */,
+				B735E175182901685ABA3456E3F14E6F /* Pods-MetalReFresh_Example-resources.sh */,
+				8C497F9CE6B4DA022DE2EE624A6C0644 /* Pods-MetalReFresh_Example-umbrella.h */,
+				877F71D45681D94218C4BCD6A167AD15 /* Pods-MetalReFresh_Example.debug.xcconfig */,
+				80EA972B174A0C69848C0F4360A111BB /* Pods-MetalReFresh_Example.release.xcconfig */,
+			);
+			name = "Pods-MetalReFresh_Example";
+			path = "Target Support Files/Pods-MetalReFresh_Example";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -212,45 +242,28 @@
 		DC1EC37952D44CC24250593350E8CEA5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				58743B3C1BAF458ACF6A156F99EC6A0F /* Pods-MetalReFresh_Example */,
-				24B126E838130FBFCAAA55FCE45FA6D7 /* Pods-MetalReFresh_Tests */,
+				B41D177C04A757D04F3528C49AC54E63 /* Pods-MetalReFresh_Example */,
+				39B3BC140A473D6CCDB8D50AF57077FE /* Pods-MetalReFresh_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F3AF317F258EA513A68F01D8E3A3146E /* MetalReFresh */ = {
-			isa = PBXGroup;
-			children = (
-				9050A2AC9609781E6D187A558A19E2CA /* MetalReFresh */,
-				73BE9A994B426078564377DF09509252 /* Support Files */,
-			);
-			name = MetalReFresh;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		F916D41E16B3EDC6588C35E0AA950A83 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BB4283971F9CA58C005350E0 /* AAPLTessellationPipeline.swift */,
-				BBC90B411F7D852A0051DF7E /* AAPLRenderer.swift */,
-				BBC90B3F1F7D852A0051DF7E /* ImageEntity.swift */,
-				BBC90B441F7D852B0051DF7E /* PullToObject.swift */,
-				BBC90B401F7D852A0051DF7E /* ViewAnimation.swift */,
-				BB7D8D111F810FE1003EAF96 /* ObjectDefaults.swift */,
-				BBE5E0351F88F27A00325DAD /* TextManager.swift */,
-				BBE5E0371F88F2DF00325DAD /* MessageManagement.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C791F3A3DC4A5BFD7C869A8486A53085 /* Headers */ = {
+		401D4335AFDEC503266EAC3255E77A51 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E517E9E5F4B2430F501D5D2C7D4CA2CF /* Pods-MetalReFresh_Tests-umbrella.h in Headers */,
+				5C7C29189760312FE6BA716854579F96 /* MetalReFresh-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D8DC7CA1CF4CF3B0829AEA22D636067 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB398F0CA877EF3805209AE06B8DE20 /* Pods-MetalReFresh_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,14 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF7770547777DDA89AF0159C9C29ABE /* Pods-MetalReFresh_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9C2331214D7E84417B8A01CDAA40D7C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FE062D71649EEFEF3B74C12A4886618 /* MetalReFresh-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,30 +296,13 @@
 			productReference = 0A111E9EF1AE34BA16C65952CBA69C06 /* Pods_MetalReFresh_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8104BE92C2EDECBC5D2D2F83E86BFEB3 /* Pods-MetalReFresh_Tests */ = {
+		68D6017611854BE02FD02921DDD4562E /* MetalReFresh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B124B6BBA595C4FCCA55816A486D9A7 /* Build configuration list for PBXNativeTarget "Pods-MetalReFresh_Tests" */;
+			buildConfigurationList = 8CC27C6A8B6FF432C76BF3A7EFEDF213 /* Build configuration list for PBXNativeTarget "MetalReFresh" */;
 			buildPhases = (
-				76BF0DE724524CDAC2AA25E161714F6E /* Sources */,
-				435A97241D2139204498C5200437E19C /* Frameworks */,
-				C791F3A3DC4A5BFD7C869A8486A53085 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-MetalReFresh_Tests";
-			productName = "Pods-MetalReFresh_Tests";
-			productReference = 6EDD67CC2611A967C9223FA25C7F21D8 /* Pods_MetalReFresh_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E9C6577A71692F7B030DBBFBBF32DA64 /* MetalReFresh */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FBAEA5D9E71613E3A41A1D1C52292123 /* Build configuration list for PBXNativeTarget "MetalReFresh" */;
-			buildPhases = (
-				FA8E2DA35801A2EE12CC5567B3E423B7 /* Sources */,
-				A13C9EE6EB6ABBFFA0A4A964C6912827 /* Frameworks */,
-				F9C2331214D7E84417B8A01CDAA40D7C /* Headers */,
+				BAD4155D15D2BB03F502A338E333DAF6 /* Sources */,
+				F3E14433823A1E1BD26A374361C1B8E5 /* Frameworks */,
+				401D4335AFDEC503266EAC3255E77A51 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -325,22 +313,32 @@
 			productReference = CB2BCA7B410FF87151CD4A3030A4A61A /* MetalReFresh.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		73182D323CE65EBC3B4A7A6534E78659 /* Pods-MetalReFresh_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66A2686393CBF9A763ADF2110CFD0C24 /* Build configuration list for PBXNativeTarget "Pods-MetalReFresh_Tests" */;
+			buildPhases = (
+				1DD75E043499EEB3907BB38590DC2D30 /* Sources */,
+				1A04A552A5C966CEC0D0775394D6B42C /* Frameworks */,
+				6D8DC7CA1CF4CF3B0829AEA22D636067 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14DABB570E0E0A386E6AA610490045FC /* PBXTargetDependency */,
+			);
+			name = "Pods-MetalReFresh_Tests";
+			productName = "Pods-MetalReFresh_Tests";
+			productReference = 6EDD67CC2611A967C9223FA25C7F21D8 /* Pods_MetalReFresh_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					39D4009E676063E0BA8A4B89D649394A = {
-						LastSwiftMigration = "";
-					};
-					E9C6577A71692F7B030DBBFBBF32DA64 = {
-						LastSwiftMigration = 0900;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -354,35 +352,35 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9C6577A71692F7B030DBBFBBF32DA64 /* MetalReFresh */,
+				68D6017611854BE02FD02921DDD4562E /* MetalReFresh */,
 				39D4009E676063E0BA8A4B89D649394A /* Pods-MetalReFresh_Example */,
-				8104BE92C2EDECBC5D2D2F83E86BFEB3 /* Pods-MetalReFresh_Tests */,
+				73182D323CE65EBC3B4A7A6534E78659 /* Pods-MetalReFresh_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		76BF0DE724524CDAC2AA25E161714F6E /* Sources */ = {
+		1DD75E043499EEB3907BB38590DC2D30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05BB4BDCE08F487D6F3D564352F7468 /* Pods-MetalReFresh_Tests-dummy.m in Sources */,
+				9F3EB4611E181BAB2E9CF8A39D8A1595 /* Pods-MetalReFresh_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA8E2DA35801A2EE12CC5567B3E423B7 /* Sources */ = {
+		BAD4155D15D2BB03F502A338E333DAF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC90B471F7D852B0051DF7E /* AAPLRenderer.swift in Sources */,
-				BBC90B451F7D852B0051DF7E /* ImageEntity.swift in Sources */,
-				BBC90B4A1F7D852B0051DF7E /* PullToObject.swift in Sources */,
-				BBC90B461F7D852B0051DF7E /* ViewAnimation.swift in Sources */,
-				BBE5E0381F88F2DF00325DAD /* MessageManagement.swift in Sources */,
-				BB7D8D121F810FE1003EAF96 /* ObjectDefaults.swift in Sources */,
-				81D4BC5F65E71D9BB70E68689A404661 /* MetalReFresh-dummy.m in Sources */,
-				BB4283981F9CA58C005350E0 /* AAPLTessellationPipeline.swift in Sources */,
-				BBE5E0361F88F27A00325DAD /* TextManager.swift in Sources */,
+				DA8467386EFCB6B950B3524F936B25E9 /* AAPLRenderer.swift in Sources */,
+				AE850B037F953BDB11FAA8EA22F26FA8 /* AAPLTessellationPipeline.swift in Sources */,
+				A3880DE4707275F106F4B901E1BC8C6C /* ImageEntity.swift in Sources */,
+				A32FD7FCD027DCF0FAEBCAF8A8A8691C /* MessageManagement.swift in Sources */,
+				9D948249C045E68623721956EC1636D3 /* MetalReFresh-dummy.m in Sources */,
+				683572840A877E1E81A8596A2BCBB621 /* ObjectDefaults.swift in Sources */,
+				5C3FD11327D214FFAD523A85FBA37BA7 /* PullToObject.swift in Sources */,
+				E694B3FB7B1E812FA3891A9D56796BCE /* TextManager.swift in Sources */,
+				9B1A6F0E8CAA0A0449F47BAD0E9D945C /* ViewAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,66 +395,141 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		14DABB570E0E0A386E6AA610490045FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MetalReFresh_Example";
+			target = 39D4009E676063E0BA8A4B89D649394A /* Pods-MetalReFresh_Example */;
+			targetProxy = 933227922F6DCBBC9D6DAACCB97B63E7 /* PBXContainerItemProxy */;
+		};
 		2F17A034D48D5D0294263866762B3086 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MetalReFresh;
-			target = E9C6577A71692F7B030DBBFBBF32DA64 /* MetalReFresh */;
+			target = 68D6017611854BE02FD02921DDD4562E /* MetalReFresh */;
 			targetProxy = 4C1EFFCAAE47FD24C064272E26E5B088 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		24CA9E5EDFB414E794B5C161FDC96348 /* Release */ = {
+		0FF2FF641DD8A76B2A5B14773C9BF07A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B4232D5A9FF357F45E87A76396AED63 /* MetalReFresh.xcconfig */;
+			baseConfigurationReference = FC1C509035EA282DF05D96C3201CB38E /* MetalReFresh.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MetalReFresh/MetalReFresh-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MetalReFresh/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MetalReFresh/MetalReFresh.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = MetalReFresh;
 				PRODUCT_NAME = MetalReFresh;
-				SDKROOT = iphoneos11.3;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+		34E932B13F6FCEFD2D6CADF005557BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80EA972B174A0C69848C0F4360A111BB /* Pods-MetalReFresh_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MetalReFresh_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MetalReFresh_Example/Pods-MetalReFresh_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4DAA3D1260DA6931949C305E2D32FC10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1C509035EA282DF05D96C3201CB38E /* MetalReFresh.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MetalReFresh/MetalReFresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MetalReFresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MetalReFresh/MetalReFresh.modulemap";
+				PRODUCT_MODULE_NAME = MetalReFresh;
+				PRODUCT_NAME = MetalReFresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		691EE0234A3BA1A3B057D3A4C23C9CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -465,17 +538,20 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -484,114 +560,39 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_VERSION = 4.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		37054FCC594B41490AED2AD8FF708EA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7A26ACC6D185873DB51704914BBC8AC /* Pods-MetalReFresh_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MetalReFresh_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MetalReFresh_Example/Pods-MetalReFresh_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MetalReFresh_Example;
-				SDKROOT = iphoneos11.3;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		68271954C0CAA1D3DCD1EB464B5848AC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B4232D5A9FF357F45E87A76396AED63 /* MetalReFresh.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MetalReFresh/MetalReFresh-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MetalReFresh/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MetalReFresh/MetalReFresh.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MetalReFresh;
-				SDKROOT = iphoneos11.3;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+		703082A85162812D3B777E668767AD25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -600,67 +601,66 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
 				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		73105BCF60ADEB3ACB30AD884B70E2FE /* Debug */ = {
+		AA1B4F71C0741049D9DE5BD88FE18D6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ED45B7E5D3E04EAC82B874CA8CCD5CA /* Pods-MetalReFresh_Tests.debug.xcconfig */;
+			baseConfigurationReference = 6E5ABCE43E15E84F9B0699F6B254A98E /* Pods-MetalReFresh_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-MetalReFresh_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MetalReFresh_Tests/Pods-MetalReFresh_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MetalReFresh_Tests;
-				SDKROOT = iphoneos11.3;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -668,80 +668,76 @@
 			};
 			name = Debug;
 		};
-		933F928522100D1A24B12C04C678F7F0 /* Release */ = {
+		B7A381A93EDB179AF31D60351C50C60A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C2E8B8A1DBDB6E5655CF6B554E6E2CD /* Pods-MetalReFresh_Tests.release.xcconfig */;
+			baseConfigurationReference = C2C615FA341342CAC5C0F51622CA65E3 /* Pods-MetalReFresh_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-MetalReFresh_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MetalReFresh_Tests/Pods-MetalReFresh_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MetalReFresh_Tests;
-				SDKROOT = iphoneos11.3;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		B356D8E675B7F22AC0958CC3172294D2 /* Release */ = {
+		E3567A2FAD2ADDC82F6C4448C6F982B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97A98D75BF55199964EF9D5809F60E82 /* Pods-MetalReFresh_Example.release.xcconfig */;
+			baseConfigurationReference = 877F71D45681D94218C4BCD6A167AD15 /* Pods-MetalReFresh_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-MetalReFresh_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MetalReFresh_Example/Pods-MetalReFresh_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MetalReFresh_Example;
-				SDKROOT = iphoneos11.3;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.1;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -749,8 +745,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
-				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+				691EE0234A3BA1A3B057D3A4C23C9CCC /* Debug */,
+				703082A85162812D3B777E668767AD25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -758,26 +754,26 @@
 		5AA54B46E59C29F800B4A87A8AD979E9 /* Build configuration list for PBXNativeTarget "Pods-MetalReFresh_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37054FCC594B41490AED2AD8FF708EA9 /* Debug */,
-				B356D8E675B7F22AC0958CC3172294D2 /* Release */,
+				E3567A2FAD2ADDC82F6C4448C6F982B4 /* Debug */,
+				34E932B13F6FCEFD2D6CADF005557BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B124B6BBA595C4FCCA55816A486D9A7 /* Build configuration list for PBXNativeTarget "Pods-MetalReFresh_Tests" */ = {
+		66A2686393CBF9A763ADF2110CFD0C24 /* Build configuration list for PBXNativeTarget "Pods-MetalReFresh_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73105BCF60ADEB3ACB30AD884B70E2FE /* Debug */,
-				933F928522100D1A24B12C04C678F7F0 /* Release */,
+				AA1B4F71C0741049D9DE5BD88FE18D6E /* Debug */,
+				B7A381A93EDB179AF31D60351C50C60A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FBAEA5D9E71613E3A41A1D1C52292123 /* Build configuration list for PBXNativeTarget "MetalReFresh" */ = {
+		8CC27C6A8B6FF432C76BF3A7EFEDF213 /* Build configuration list for PBXNativeTarget "MetalReFresh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68271954C0CAA1D3DCD1EB464B5848AC /* Debug */,
-				24CA9E5EDFB414E794B5C161FDC96348 /* Release */,
+				4DAA3D1260DA6931949C305E2D32FC10 /* Debug */,
+				0FF2FF641DD8A76B2A5B14773C9BF07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
