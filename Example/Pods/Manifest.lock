@@ -1,5 +1,5 @@
 PODS:
-  - MetalReFresh (0.7.2)
+  - MetalReFresh (0.7.3)
 
 DEPENDENCIES:
   - MetalReFresh (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MetalReFresh: daa3840d427c16ccb2bd0cdb9b860cb77f5da401
+  MetalReFresh: ea6bd6a9148c8401f6f3c29afe833599a6fc139c
 
 PODFILE CHECKSUM: 5b88e0d6e3f003bd032331bf0af7a6cd9a6ef20d
 
