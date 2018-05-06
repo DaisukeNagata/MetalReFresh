@@ -19,5 +19,5 @@ s.social_media_url   = "http://twitter.com/daisukenagata"
 s.platform     = :ios, "11.3"
 s.ios.deployment_target = "11.3"
 s.source       = { :git => "https://github.com/daisukenagata/MetalReFresh.git", :tag => "#{s.version}" }
-s.source_files = 'MetalReFresh/**/*'
+s.source_files = 'Metal/**/*'
 end

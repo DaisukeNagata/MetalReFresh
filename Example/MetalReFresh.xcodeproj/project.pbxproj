@@ -42,7 +42,7 @@
 		607FACE51AFB9204008FA782 /* MetalReFresh_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalReFresh_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		61B82B6A068599F50309F833 /* MetalReFresh.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MetalReFresh.podspec; path = ../MetalReFresh.podspec; sourceTree = "<group>"; };
+		61B82B6A068599F50309F833 /* MetalReFresh.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MetalReFresh.podspec; path = ../MetalReFresh.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97D056723B5D1E0BE12287D7 /* Pods_MetalReFresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetalReFresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BFAE15E3B04109204701A0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B59A075E200BF7F92DD508B2 /* Pods-MetalReFresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetalReFresh_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetalReFresh_Tests/Pods-MetalReFresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
