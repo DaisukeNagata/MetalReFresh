@@ -12,7 +12,7 @@ s.name         = "MetalReFresh"
 s.version      = "0.7.3"
 s.summary      = "It is a library using metal."
 s.homepage     = "https://github.com/daisukenagata/MetalReFresh"
-s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+s.license      = { :type => "MIT"}
 s.author             = { "daisukenagata" => "dbank0208@gmail.com" }
 s.authors            = { "daisukenagata" => "dbank0208@gmail.com" }
 s.social_media_url   = "http://twitter.com/daisukenagata"
