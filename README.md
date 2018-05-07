@@ -1,4 +1,5 @@
 # MetalReFresh Xcode9.3
+![CI Status](https://travis-ci.org/daisukenagata/MetalReFresh.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/MetalReFresh.svg?style=flat)](http://cocoapods.org/pods/MetalReFresh)
 [![License](https://img.shields.io/cocoapods/l/MetalReFresh.svg?style=flat)](http://cocoapods.org/pods/MetalReFresh)
 [![Platform](https://img.shields.io/cocoapods/p/MetalReFresh.svg?style=flat)](http://cocoapods.org/pods/MetalReFresh)
