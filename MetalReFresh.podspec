@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "MetalReFresh"
-s.version      = "0.7.7"
+s.version      = "0.7.8"
 s.summary      = "It is a library using metal."
 s.homepage     = "https://github.com/daisukenagata/MetalReFresh"
 s.license      = { :type => "MIT"}
