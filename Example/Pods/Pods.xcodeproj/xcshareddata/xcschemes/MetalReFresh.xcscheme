@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D6017611854BE02FD02921DDD4562E"
+               BlueprintIdentifier = "4CFD1F0E8E2CE23B7B04FC9F0DC7B8B9"
                BuildableName = "MetalReFresh.framework"
                BlueprintName = "MetalReFresh"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D6017611854BE02FD02921DDD4562E"
+            BlueprintIdentifier = "4CFD1F0E8E2CE23B7B04FC9F0DC7B8B9"
             BuildableName = "MetalReFresh.framework"
             BlueprintName = "MetalReFresh"
             ReferencedContainer = "container:Pods.xcodeproj">
