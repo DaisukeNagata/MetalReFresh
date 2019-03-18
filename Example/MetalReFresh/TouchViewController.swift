@@ -32,7 +32,7 @@ class TouchViewController: UIViewController {
     }
 
     private func swipeMethod() {
-        let directions: UISwipeGestureRecognizerDirection = .up
+        let directions: UISwipeGestureRecognizer.Direction = .up
         let gesture = UISwipeGestureRecognizer(target: self,
                                                action:#selector(handleSwipe(sender:)))
         gesture.direction = directions

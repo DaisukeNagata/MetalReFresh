@@ -37,7 +37,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     func refresh() {
         refreshControl?.alpha = 0
         refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(refreshSet), for: UIControlEvents.valueChanged)
+        refreshControl?.addTarget(self, action: #selector(refreshSet), for: UIControl.Event.valueChanged)
     }
 
     @objc func refreshSet() {
@@ -61,7 +61,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
     }
     
     private func swipeMethod() {
-        let directions: UISwipeGestureRecognizerDirection = .right
+        let directions: UISwipeGestureRecognizer.Direction = .right
         let gesture = UISwipeGestureRecognizer(target: self,
                                            action:#selector(handleSwipe(sender:)))
         gesture.direction = directions
@@ -91,7 +91,7 @@ class TableViewController: UITableViewController,UITableViewDragDelegate,UITable
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if pull.metalView == nil {
             
         ObjectDefaults().objectIndexDefaults(index: indexPath.row)

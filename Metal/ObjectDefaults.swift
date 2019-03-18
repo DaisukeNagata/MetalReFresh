@@ -17,7 +17,7 @@ public class ObjectDefaults : NSObject{
     public func objectDefaults(index: Int, images:[UIImage]) {
 
         let dataImages: [Data] = images.map { (image) -> Data in
-            UIImagePNGRepresentation(image)!
+            image.pngData()!
         }
 
         userDefaults.set(index, forKey: "index")
