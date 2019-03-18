@@ -28,7 +28,7 @@ public class TextManager: NSObject{
            
             for i in 0...images.count-1{
                 
-            imageData.append(UIImagePNGRepresentation(images[i])!)
+            imageData.append(images[i].pngData()!)
             fileURL.append(URL(fileURLWithPath: messageManagement.defaultsPath).appendingPathComponent(fileNamed+"\(i)"))
                 
             }

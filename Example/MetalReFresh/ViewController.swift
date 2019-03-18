@@ -66,7 +66,7 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
     private func swipeMethod()
     {
         
-        let leftRightdirections: [UISwipeGestureRecognizerDirection] = [.right, .left]
+        let leftRightdirections: [UISwipeGestureRecognizer.Direction] = [.right, .left]
         for direction in leftRightdirections {
             let gesture = UISwipeGestureRecognizer(target: self,
                                                    action:#selector(handleLeftRightSwipe(sender:)))
@@ -75,14 +75,14 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
             self.view.addGestureRecognizer(gesture)
         }
         
-        let updirection: UISwipeGestureRecognizerDirection = .up
+        let updirection: UISwipeGestureRecognizer.Direction = .up
             let gesture = UISwipeGestureRecognizer(target: self,
                                                    action:#selector(handleUpSwipe(sender:)))
             
             gesture.direction = updirection
             self.view.addGestureRecognizer(gesture)
         
-        let downdirection: UISwipeGestureRecognizerDirection = .down
+        let downdirection: UISwipeGestureRecognizer.Direction = .down
         let gestureDown = UISwipeGestureRecognizer(target: self,
                                                action:#selector(handleDownSwipe(sender:)))
         
@@ -146,12 +146,11 @@ class ViewController: UIViewController,AVCapturePhotoCaptureDelegate,UIImagePick
         }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
-    {
+   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         cameraView.removeFromSuperview()
  
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         cameraViewRoll.frame = self.view.frame
         cameraViewRoll.image = image

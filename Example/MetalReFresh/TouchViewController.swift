@@ -12,13 +12,11 @@ import MetalReFresh
 class TouchViewController: UIViewController {
 
     static var intCount = Int()
+    var vc = ViewController()
     var pull = PullToObject()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        swipeMethod()
-        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
