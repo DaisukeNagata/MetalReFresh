@@ -257,7 +257,10 @@ class AAPLRenderer:NSObject,MTKViewDelegate {
             renderEncoder?.setFragmentTexture(colorMap, index: 1)
             renderEncoder?.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: 6)
             renderEncoder?.endEncoding()
+            #if targetEnvironment(simulator)
+            #else
             commandBuffer.present((mtkView.currentDrawable?.layer.nextDrawable())!)
+            #endif
             mtkView.releaseDrawables()
         }
         
